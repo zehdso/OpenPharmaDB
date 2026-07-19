@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "OpenPharmaDB Recall Record",
+  "description": "Canonical recall schema used by OpenPharmaDB.",
+  "type": "object",
+  "required": [
+    "id",
+    "source",
+    "country",
+    "status",
+    "classification",
+    "product_name",
+    "reason",
+    "recall_date"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier assigned by the source."
+    },
+    "source": {
+      "type": "string",
+      "description": "Authority providing the recall (FDA, EMA, CDSCO, etc.)."
+    },
+    "country": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "classification": {
+      "type": "string"
+    },
+    "product_name": {
+      "type": "string"
+    },
+    "generic_name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "manufacturer": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "reason": {
+      "type": "string"
+    },
+    "recall_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "termination_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "affected_lots": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "distribution": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "official_url": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uri"
+    },
+    "raw_source": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": false
+}
