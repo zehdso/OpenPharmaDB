@@ -24,3 +24,7 @@ env/
 
 # Temporary files
 *.tmp
+
+# Generated data
+data/raw/**/*.json
+data/normalized/**/*.json
