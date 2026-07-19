@@ -1,12 +1,13 @@
 import json
+from pathlib import Path
 
-from scripts.config import FDA_RAW_DIR, NORMALIZED_DATA_DIR
+from scripts.config import FDA_RAW_DIR
 from scripts.utils import format_date
+
+OUTPUT_FILE = Path("data/normalized/recalls/fda_recalls.json")
 
 
 def normalize_record(record):
-    """Convert an FDA recall record to the OpenPharmaDB schema."""
-
     return {
         "id": record.get("event_id"),
         "source": "FDA",
@@ -17,33 +18,47 @@ def normalize_record(record):
         "generic_name": None,
         "manufacturer": record.get("recalling_firm"),
         "reason": record.get("reason_for_recall"),
+        "affected_lots": (
+            [record["code_info"]]
+            if record.get("code_info")
+            else []
+        ),
+        "distribution": record.get("distribution_pattern"),
         "recall_date": format_date(record.get("recall_initiation_date")),
         "termination_date": format_date(record.get("termination_date")),
-        "affected_lots": [],
-        "distribution": record.get("distribution_pattern"),
         "official_url": None,
-        "raw_source": record,
+        "raw_source": {
+            "authority": "FDA",
+            "dataset": "Drug Enforcement Reports",
+            "api": "openFDA",
+        },
     }
 
 
+def load_all_records():
+    pages_dir = FDA_RAW_DIR / "pages"
+    records = []
+
+    for page_file in sorted(pages_dir.glob("page_*.json")):
+        with page_file.open("r", encoding="utf-8") as f:
+            data = json.load(f)
+
+        records.extend(data.get("results", []))
+
+    return records
+
+
 def main():
-    input_file = FDA_RAW_DIR / "latest.json"
-    output_dir = NORMALIZED_DATA_DIR / "recalls"
-    output_dir.mkdir(parents=True, exist_ok=True)
+    raw_records = load_all_records()
 
-    with input_file.open("r", encoding="utf-8") as f:
-        data = json.load(f)
+    normalized = [normalize_record(record) for record in raw_records]
 
-    records = data.get("results", [])
-    normalized = [normalize_record(record) for record in records]
+    OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
 
-    output_file = output_dir / "fda_recalls.json"
-
-    with output_file.open("w", encoding="utf-8") as f:
+    with OUTPUT_FILE.open("w", encoding="utf-8") as f:
         json.dump(normalized, f, indent=2)
 
-    print(f"Normalized {len(normalized)} records")
-    print(f"Saved: {output_file}")
+    print(f"Normalized {len(normalized)} records.")
 
 
 if __name__ == "__main__":

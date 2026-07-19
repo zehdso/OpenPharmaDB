@@ -1,8 +1,11 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://openpharmadb.org/schemas/recall.schema.json",
   "title": "OpenPharmaDB Recall Record",
-  "description": "Canonical recall schema used by OpenPharmaDB.",
+  "description": "Canonical schema for pharmaceutical recall records from global regulators.",
   "type": "object",
+  "additionalProperties": false,
+
   "required": [
     "id",
     "source",
@@ -11,77 +14,110 @@
     "classification",
     "product_name",
     "reason",
-    "recall_date"
+    "recall_date",
+    "affected_lots",
+    "distribution",
+    "raw_source"
   ],
+
   "properties": {
     "id": {
       "type": "string",
-      "description": "Unique identifier assigned by the source."
+      "description": "Unique recall identifier from the regulator."
     },
+
     "source": {
       "type": "string",
-      "description": "Authority providing the recall (FDA, EMA, CDSCO, etc.)."
+      "description": "Regulatory authority (FDA, EMA, CDSCO, MHRA, etc.)."
     },
+
     "country": {
-      "type": "string"
-    },
-    "status": {
-      "type": "string"
-    },
-    "classification": {
-      "type": "string"
-    },
-    "product_name": {
-      "type": "string"
-    },
-    "generic_name": {
-      "type": [
-        "string",
-        "null"
-      ]
-    },
-    "manufacturer": {
-      "type": [
-        "string",
-        "null"
-      ]
-    },
-    "reason": {
-      "type": "string"
-    },
-    "recall_date": {
       "type": "string",
-      "format": "date"
+      "description": "Country or region issuing the recall."
     },
-    "termination_date": {
-      "type": [
-        "string",
-        "null"
-      ],
-      "format": "date"
+
+    "status": {
+      "type": ["string", "null"],
+      "description": "Current recall status."
     },
+
+    "classification": {
+      "type": ["string", "null"],
+      "description": "Risk classification assigned by the regulator."
+    },
+
+    "product_name": {
+      "type": ["string", "null"],
+      "description": "Product or medicine name."
+    },
+
+    "generic_name": {
+      "type": ["string", "null"],
+      "description": "Generic drug name if available."
+    },
+
+    "manufacturer": {
+      "type": ["string", "null"],
+      "description": "Manufacturer or recalling company."
+    },
+
+    "reason": {
+      "type": ["string", "null"],
+      "description": "Reason for the recall."
+    },
+
     "affected_lots": {
       "type": "array",
+      "description": "Affected lot or batch identifiers.",
       "items": {
         "type": "string"
       }
     },
+
     "distribution": {
-      "type": [
-        "string",
-        "null"
-      ]
+      "type": ["string", "null"],
+      "description": "Distribution information."
     },
+
+    "recall_date": {
+      "type": ["string", "null"],
+      "description": "Recall initiation date in ISO 8601 format (YYYY-MM-DD)."
+    },
+
+    "termination_date": {
+      "type": ["string", "null"],
+      "description": "Recall termination date in ISO 8601 format."
+    },
+
     "official_url": {
-      "type": [
-        "string",
-        "null"
-      ],
-      "format": "uri"
+      "type": ["string", "null"],
+      "format": "uri",
+      "description": "Official regulator URL for the recall."
     },
+
     "raw_source": {
-      "type": "object"
+      "type": "object",
+      "description": "Metadata describing the original data source.",
+      "required": [
+        "authority",
+        "dataset"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "authority": {
+          "type": "string"
+        },
+        "dataset": {
+          "type": "string"
+        },
+        "api": {
+          "type": ["string", "null"]
+        },
+        "url": {
+          "type": ["string", "null"],
+          "format": "uri"
+        }
+      }
     }
-  },
-  "additionalProperties": false
+  }
 }
