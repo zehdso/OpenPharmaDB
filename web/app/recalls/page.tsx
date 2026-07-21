@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { getRecalls, Recall } from "@/lib/recalls";
+import { useSearchParams } from "next/navigation";
+import { useRecalls } from "@/components/RecallProvider";
 import RecallsTable from "@/components/recalls/RecallsTable";
 import SearchBar from "@/components/recalls/SearchBar";
 import FilterBar from "@/components/recalls/FilterBar";
@@ -9,11 +10,12 @@ import FilterBar from "@/components/recalls/FilterBar";
 const PAGE_SIZE = 50;
 
 export default function RecallsPage() {
-  const [recalls, setRecalls] = useState<Recall[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState("");
+  const { recalls, loading, error } = useRecalls();
+  const searchParams = useSearchParams();
 
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState(
+    searchParams.get("search") ?? ""
+  );
   const [regulator, setRegulator] = useState("");
   const [classification, setClassification] = useState("");
   const [country, setCountry] = useState("");
@@ -21,57 +23,50 @@ export default function RecallsPage() {
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
 
   useEffect(() => {
-    async function load() {
-      try {
-        const data = await getRecalls();
-
-        setRecalls(
-          [...data].sort((a, b) =>
-            b.recall_date.localeCompare(a.recall_date)
-          )
-        );
-      } catch {
-        setError("Failed to load recalls.");
-      } finally {
-        setLoading(false);
-      }
-    }
-
-    load();
-  }, []);
+    const query = searchParams.get("search") ?? "";
+    setSearch(query);
+  }, [searchParams]);
 
   useEffect(() => {
     setVisibleCount(PAGE_SIZE);
   }, [search, regulator, classification, country]);
 
+  const sortedRecalls = useMemo(
+    () =>
+      [...recalls].sort((a, b) =>
+        b.recall_date.localeCompare(a.recall_date)
+      ),
+    [recalls]
+  );
+
   const regulators = useMemo(
     () =>
-      [...new Set(recalls.map((r) => r.regulator))]
+      [...new Set(sortedRecalls.map((r) => r.regulator))]
         .filter(Boolean)
         .sort(),
-    [recalls]
+    [sortedRecalls]
   );
 
   const classifications = useMemo(
     () =>
-      [...new Set(recalls.map((r) => r.classification))]
+      [...new Set(sortedRecalls.map((r) => r.classification))]
         .filter(Boolean)
         .sort(),
-    [recalls]
+    [sortedRecalls]
   );
 
   const countries = useMemo(
     () =>
-      [...new Set(recalls.map((r) => r.country))]
+      [...new Set(sortedRecalls.map((r) => r.country))]
         .filter(Boolean)
         .sort(),
-    [recalls]
+    [sortedRecalls]
   );
 
   const filteredRecalls = useMemo(() => {
     const query = search.trim().toLowerCase();
 
-    return recalls.filter((recall) => {
+    return sortedRecalls.filter((recall) => {
       const matchesSearch =
         !query ||
         (recall.product ?? "").toLowerCase().includes(query) ||
@@ -95,7 +90,7 @@ export default function RecallsPage() {
       );
     });
   }, [
-    recalls,
+    sortedRecalls,
     search,
     regulator,
     classification,

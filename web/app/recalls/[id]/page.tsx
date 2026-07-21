@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { getRecalls, Recall } from "@/lib/recalls";
+import { use } from "react";
+import { useRecalls } from "@/components/RecallProvider";
 
 function formatDate(date: string) {
   if (!date || date.length !== 8) return date;
@@ -20,23 +20,11 @@ export default function RecallDetailsPage({
 }: {
   params: Promise<{ id: string }>;
 }) {
-  const [recall, setRecall] = useState<Recall | null>(null);
-  const [loading, setLoading] = useState(true);
+  const { id } = use(params);
 
-  useEffect(() => {
-    async function load() {
-      const { id } = await params;
+  const { recalls, loading } = useRecalls();
 
-      const recalls = await getRecalls();
-
-      const found = recalls.find((r) => r.id === id) ?? null;
-
-      setRecall(found);
-      setLoading(false);
-    }
-
-    load();
-  }, [params]);
+  const recall = recalls.find((r) => r.id === id) ?? null;
 
   if (loading) {
     return (
@@ -61,13 +49,11 @@ export default function RecallDetailsPage({
       </h1>
 
       <div className="mt-10 space-y-6 rounded-3xl border bg-white p-8 shadow-sm">
-
         <Info label="Regulator" value={recall.regulator} />
         <Info label="Country" value={recall.country} />
         <Info label="Classification" value={recall.classification} />
         <Info label="Recall Date" value={formatDate(recall.recall_date)} />
         <Info label="Reason" value={recall.reason} />
-
       </div>
     </main>
   );

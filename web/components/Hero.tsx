@@ -1,4 +1,22 @@
+"use client";
+
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+
 export default function Hero() {
+  const [search, setSearch] = useState("");
+  const router = useRouter();
+
+  function handleSearch() {
+    const query = search.trim();
+
+    if (query) {
+      router.push(`/recalls?search=${encodeURIComponent(query)}`);
+    } else {
+      router.push("/recalls");
+    }
+  }
+
   return (
     <section className="mx-auto max-w-7xl px-6 py-20 text-center">
       <span className="rounded-full border border-blue-200 bg-blue-50 px-4 py-1 text-sm font-medium text-blue-700">
@@ -19,6 +37,13 @@ export default function Hero() {
       <div className="mx-auto mt-10 max-w-3xl">
         <input
           type="text"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              handleSearch();
+            }
+          }}
           placeholder="Search medicines, manufacturers, recalls..."
           className="w-full rounded-2xl border border-slate-300 bg-white px-6 py-4 text-lg shadow-sm outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
         />

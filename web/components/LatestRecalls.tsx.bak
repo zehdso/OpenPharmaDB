@@ -1,8 +1,8 @@
 "use client";
 
-import Link from "next/link";
+import { useEffect, useState } from "react";
 import RecallCard from "./RecallCard";
-import { useRecalls } from "@/components/RecallProvider";
+import { getRecalls, Recall } from "@/lib/recalls";
 
 function formatDate(date: string) {
   if (!date || date.length !== 8) return date;
@@ -17,11 +17,29 @@ function formatDate(date: string) {
 }
 
 export default function LatestRecalls() {
-  const { recalls, loading, error } = useRecalls();
+  const [recalls, setRecalls] = useState<Recall[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
 
-  const latest = [...recalls]
-    .sort((a, b) => b.recall_date.localeCompare(a.recall_date))
-    .slice(0, 10);
+  useEffect(() => {
+    async function load() {
+      try {
+        const data = await getRecalls();
+
+        const latest = [...data]
+          .sort((a, b) => b.recall_date.localeCompare(a.recall_date))
+          .slice(0, 10);
+
+        setRecalls(latest);
+      } catch {
+        setError("Failed to load recalls.");
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    load();
+  }, []);
 
   return (
     <section className="mx-auto max-w-7xl px-6 py-16">
@@ -30,12 +48,9 @@ export default function LatestRecalls() {
           Latest Recalls
         </h2>
 
-        <Link
-          href="/recalls"
-          className="rounded-xl bg-blue-600 px-5 py-3 text-white transition hover:bg-blue-700"
-        >
+        <button className="rounded-xl bg-blue-600 px-5 py-3 text-white transition hover:bg-blue-700">
           View All
-        </Link>
+        </button>
       </div>
 
       {loading && (
@@ -52,7 +67,7 @@ export default function LatestRecalls() {
 
       {!loading && !error && (
         <div className="space-y-5">
-          {latest.map((recall) => (
+          {recalls.map((recall) => (
             <RecallCard
               key={recall.id}
               title={recall.product || recall.title}

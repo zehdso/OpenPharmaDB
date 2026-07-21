@@ -1,47 +1,34 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { getRecalls } from "@/lib/recalls";
+import { useRecalls } from "@/components/RecallProvider";
 
 export default function Stats() {
-  const [totalRecalls, setTotalRecalls] = useState("—");
-  const [regulators, setRegulators] = useState("—");
-  const [lastUpdated, setLastUpdated] = useState("—");
+  const { recalls, loading } = useRecalls();
 
-  useEffect(() => {
-    async function load() {
-      try {
-        const recalls = await getRecalls();
+  let totalRecalls = "—";
+  let regulators = "—";
+  let lastUpdated = "—";
 
-        setTotalRecalls(recalls.length.toLocaleString());
+  if (!loading && recalls.length > 0) {
+    totalRecalls = recalls.length.toLocaleString();
 
-        setRegulators(
-          new Set(recalls.map((r) => r.regulator)).size.toString()
-        );
+    regulators = new Set(
+      recalls.map((r) => r.regulator)
+    ).size.toString();
 
-        if (recalls.length > 0) {
-          const latest = recalls.reduce((latest, current) =>
-            current.recall_date > latest.recall_date ? current : latest
-          );
+    const latest = recalls.reduce((latest, current) =>
+      current.recall_date > latest.recall_date ? current : latest
+    );
 
-          const d = latest.recall_date;
+    const d = latest.recall_date;
 
-          const formatted = `${d.slice(6, 8)} ${new Date(
-            Number(d.slice(0, 4)),
-            Number(d.slice(4, 6)) - 1
-          ).toLocaleString(undefined, {
-            month: "short",
-          })} ${d.slice(0, 4)}`;
-
-          setLastUpdated(formatted);
-        }
-      } catch (error) {
-        console.error(error);
-      }
-    }
-
-    load();
-  }, []);
+    lastUpdated = `${d.slice(6, 8)} ${new Date(
+      Number(d.slice(0, 4)),
+      Number(d.slice(4, 6)) - 1
+    ).toLocaleString(undefined, {
+      month: "short",
+    })} ${d.slice(0, 4)}`;
+  }
 
   const stats = [
     { value: totalRecalls, label: "Total Recalls" },
