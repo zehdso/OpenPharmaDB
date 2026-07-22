@@ -1,11 +1,9 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { useSearchParams } from "next/navigation";
 
 import { PageHeader } from "@/components/layout/PageHeader";
 import { useRecalls } from "@/components/RecallProvider";
-
 import RecallsTable from "@/components/recalls/RecallsTable";
 import SearchBar from "@/components/recalls/SearchBar";
 import FilterBar from "@/components/recalls/FilterBar";
@@ -14,21 +12,12 @@ const PAGE_SIZE = 50;
 
 export default function RecallsPage() {
   const { recalls, loading, error } = useRecalls();
-  const searchParams = useSearchParams();
 
-  const [search, setSearch] = useState(
-    searchParams.get("search") ?? ""
-  );
-
+  const [search, setSearch] = useState("");
   const [regulator, setRegulator] = useState("");
   const [classification, setClassification] = useState("");
   const [country, setCountry] = useState("");
-
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
-
-  useEffect(() => {
-    setSearch(searchParams.get("search") ?? "");
-  }, [searchParams]);
 
   useEffect(() => {
     setVisibleCount(PAGE_SIZE);

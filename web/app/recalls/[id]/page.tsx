@@ -1,9 +1,7 @@
-"use client";
+import { promises as fs } from "fs";
+import path from "path";
 
-import { use } from "react";
-import { motion } from "framer-motion";
-
-import { useRecalls } from "@/components/RecallProvider";
+import type { Recall } from "@/lib/recalls";
 
 import RecallHeader from "@/components/recall/RecallHeader";
 import RecallHero from "@/components/recall/RecallHero";
@@ -23,56 +21,29 @@ function formatDate(date: string) {
   })} ${year}`;
 }
 
-export default function RecallDetailsPage({
+async function loadRecalls(): Promise<Recall[]> {
+  const file = path.join(process.cwd(), "public", "recalls.json");
+  const json = await fs.readFile(file, "utf8");
+  return JSON.parse(json);
+}
+
+export async function generateStaticParams() {
+  const recalls = await loadRecalls();
+
+  return recalls.map((recall) => ({
+    id: recall.id,
+  }));
+}
+
+export default async function RecallDetailsPage({
   params,
 }: {
   params: Promise<{ id: string }>;
 }) {
-  const { id } = use(params);
+  const { id } = await params;
 
-  const { recalls, loading } = useRecalls();
-
+  const recalls = await loadRecalls();
   const recall = recalls.find((r) => r.id === id);
-
-  if (loading) {
-    return (
-      <main
-        className="min-h-screen"
-        style={{ background: "var(--bg)" }}
-      >
-        <div className="mx-auto w-full max-w-5xl px-4 py-24 sm:px-6 lg:max-w-6xl">
-          <div
-            className="h-12 w-2/3 animate-pulse rounded-2xl"
-            style={{
-              background: "var(--surface)",
-              boxShadow: "var(--shadow-inset)",
-            }}
-          />
-
-          <div
-            className="mt-6 h-56 animate-pulse rounded-3xl"
-            style={{
-              background: "var(--surface)",
-              boxShadow: "var(--shadow-inset)",
-            }}
-          />
-
-          <div className="mt-6 grid grid-cols-2 gap-4">
-            {[0, 1, 2, 3].map((i) => (
-              <div
-                key={i}
-                className="h-32 animate-pulse rounded-2xl"
-                style={{
-                  background: "var(--surface)",
-                  boxShadow: "var(--shadow-inset)",
-                }}
-              />
-            ))}
-          </div>
-        </div>
-      </main>
-    );
-  }
 
   if (!recall) {
     return (
@@ -96,9 +67,7 @@ export default function RecallDetailsPage({
 
           <p
             className="mt-4"
-            style={{
-              color: "var(--text-secondary)",
-            }}
+            style={{ color: "var(--text-secondary)" }}
           >
             This recall may have been removed or the URL is invalid.
           </p>
@@ -117,12 +86,7 @@ export default function RecallDetailsPage({
     >
       <RecallHeader title={title} />
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        className="relative z-10 mx-auto w-full max-w-5xl space-y-6 px-4 pb-8 pt-24 sm:px-6 lg:max-w-6xl lg:space-y-8"
-      >
+      <div className="relative z-10 mx-auto w-full max-w-5xl space-y-6 px-4 pb-8 pt-24 sm:px-6 lg:max-w-6xl lg:space-y-8">
         <RecallHero
           title={title}
           classification={recall.classification}
@@ -131,9 +95,7 @@ export default function RecallDetailsPage({
           date={formattedDate}
         />
 
-        <RecallActions
-          title={title}
-        />
+        <RecallActions title={title} />
 
         <RecallMetaGrid
           regulator={recall.regulator}
@@ -142,10 +104,8 @@ export default function RecallDetailsPage({
           date={formattedDate}
         />
 
-        <RecallReason
-          reason={recall.reason}
-        />
-      </motion.div>
+        <RecallReason reason={recall.reason} />
+      </div>
     </main>
   );
 }
