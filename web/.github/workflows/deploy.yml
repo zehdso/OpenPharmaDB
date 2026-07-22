@@ -20,6 +20,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    defaults:
+      run:
+        working-directory: web
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -29,6 +33,7 @@ jobs:
         with:
           node-version: 22
           cache: npm
+          cache-dependency-path: web/package-lock.json
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -37,24 +42,27 @@ jobs:
         run: npm ci
 
       - name: Build
+        env:
+          GITHUB_ACTIONS: true
         run: npm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          path: web/out
 
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
     needs: build
+
     runs-on: ubuntu-latest
 
     permissions:
       pages: write
       id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Deploy to GitHub Pages
