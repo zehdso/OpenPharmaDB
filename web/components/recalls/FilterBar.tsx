@@ -25,14 +25,33 @@ function Select({
 }) {
   return (
     <div>
-      <label className="mb-2 block text-sm font-medium text-slate-700">
+      <label
+        className="mb-2 block text-sm font-medium"
+        style={{
+          color: "var(--text)",
+        }}
+      >
         {label}
       </label>
 
       <select
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3"
+        className="w-full rounded-xl px-4 py-3 outline-none transition-all duration-200"
+        style={{
+          background: "var(--surface)",
+          color: "var(--text)",
+          border: "none",
+          boxShadow: "var(--shadow-inset)",
+        }}
+        onFocus={(e) => {
+          e.currentTarget.style.boxShadow =
+            "var(--shadow-inset), 0 0 0 2px color-mix(in srgb, var(--accent) 20%, transparent)";
+        }}
+        onBlur={(e) => {
+          e.currentTarget.style.boxShadow =
+            "var(--shadow-inset)";
+        }}
       >
         <option value="">All</option>
 

@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { useRecalls } from "@/components/RecallProvider";
 
 export default function Stats() {
@@ -31,27 +32,69 @@ export default function Stats() {
   }
 
   const stats = [
-    { value: totalRecalls, label: "Total Recalls" },
-    { value: regulators, label: "Regulators" },
-    { value: lastUpdated, label: "Last Updated" },
+    {
+      value: totalRecalls,
+      label: "Total Recalls",
+      description: "Indexed records",
+    },
+    {
+      value: regulators,
+      label: "Regulators",
+      description: "Official agencies",
+    },
+    {
+      value: lastUpdated,
+      label: "Last Updated",
+      description: "Latest imported recall",
+    },
   ];
 
   return (
-    <section className="mx-auto max-w-7xl px-6">
-      <div className="grid gap-6 md:grid-cols-3">
-        {stats.map((stat) => (
-          <div
+    <section className="mx-auto max-w-6xl px-4 py-4 sm:px-6">
+      <div className="grid gap-4 md:grid-cols-3">
+        {stats.map((stat, index) => (
+          <motion.div
             key={stat.label}
-            className="rounded-3xl border border-slate-200 bg-white p-8 text-center shadow-sm"
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 0.35,
+              delay: index * 0.08,
+            }}
+            className="rounded-3xl p-6 transition-all duration-200 hover:-translate-y-1 hover:shadow-[var(--shadow-floating)]"
+            style={{
+              background: "var(--card)",
+              boxShadow: "var(--shadow-medium)",
+            }}
           >
-            <h3 className="text-4xl font-bold text-slate-900">
+            <p
+              className="text-sm font-medium"
+              style={{
+                color: "var(--text-secondary)",
+              }}
+            >
+              {stat.label}
+            </p>
+
+            <h3
+              className="mt-3 text-3xl font-bold tracking-tight"
+              style={{
+                color: "var(--text)",
+              }}
+            >
               {stat.value}
             </h3>
 
-            <p className="mt-2 text-slate-500">
-              {stat.label}
+            <p
+              className="mt-2 text-sm"
+              style={{
+                color: "var(--text-secondary)",
+              }}
+            >
+              {stat.description}
             </p>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

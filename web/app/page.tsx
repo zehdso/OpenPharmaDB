@@ -1,4 +1,4 @@
-import Navbar from "@/components/Navbar";
+import AppLayout from "@/components/layout/AppLayout";
 import Hero from "@/components/Hero";
 import Stats from "@/components/Stats";
 import WhatsNew from "@/components/WhatsNew";
@@ -7,13 +7,12 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-slate-50">
-      <Navbar />
+    <AppLayout>
       <Hero />
       <Stats />
       <WhatsNew />
       <LatestRecalls />
       <Footer />
-    </main>
+    </AppLayout>
   );
 }

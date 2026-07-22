@@ -2,7 +2,10 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
+
+import { PageHeader } from "@/components/layout/PageHeader";
 import { useRecalls } from "@/components/RecallProvider";
+
 import RecallsTable from "@/components/recalls/RecallsTable";
 import SearchBar from "@/components/recalls/SearchBar";
 import FilterBar from "@/components/recalls/FilterBar";
@@ -16,6 +19,7 @@ export default function RecallsPage() {
   const [search, setSearch] = useState(
     searchParams.get("search") ?? ""
   );
+
   const [regulator, setRegulator] = useState("");
   const [classification, setClassification] = useState("");
   const [country, setCountry] = useState("");
@@ -23,8 +27,7 @@ export default function RecallsPage() {
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
 
   useEffect(() => {
-    const query = searchParams.get("search") ?? "";
-    setSearch(query);
+    setSearch(searchParams.get("search") ?? "");
   }, [searchParams]);
 
   useEffect(() => {
@@ -73,20 +76,11 @@ export default function RecallsPage() {
         (recall.title ?? "").toLowerCase().includes(query) ||
         (recall.regulator ?? "").toLowerCase().includes(query);
 
-      const matchesRegulator =
-        !regulator || recall.regulator === regulator;
-
-      const matchesClassification =
-        !classification || recall.classification === classification;
-
-      const matchesCountry =
-        !country || recall.country === country;
-
       return (
         matchesSearch &&
-        matchesRegulator &&
-        matchesClassification &&
-        matchesCountry
+        (!regulator || recall.regulator === regulator) &&
+        (!classification || recall.classification === classification) &&
+        (!country || recall.country === country)
       );
     });
   }, [
@@ -100,16 +94,16 @@ export default function RecallsPage() {
   const visibleRecalls = filteredRecalls.slice(0, visibleCount);
 
   return (
-    <main className="min-h-screen bg-slate-50">
-      <section className="mx-auto max-w-7xl px-6 py-16">
-        <h1 className="text-4xl font-bold text-slate-900">
-          Recalls Database
-        </h1>
+    <main
+      className="min-h-screen"
+      style={{ background: "var(--bg)" }}
+    >
+      <PageHeader
+        title="Recalls"
+        subtitle="Browse and search pharmaceutical recalls"
+      />
 
-        <p className="mt-4 text-lg text-slate-600">
-          Browse and search pharmaceutical recalls.
-        </p>
-
+      <section className="mx-auto max-w-7xl px-6 py-10">
         <div className="mt-8">
           <SearchBar
             value={search}
@@ -129,13 +123,22 @@ export default function RecallsPage() {
           />
         </div>
 
-        <p className="mb-6 text-sm text-slate-500">
+        <p
+          className="mb-6 text-sm"
+          style={{
+            color: "var(--text-secondary)",
+          }}
+        >
           Showing {visibleRecalls.length.toLocaleString()} of{" "}
           {filteredRecalls.length.toLocaleString()} recall(s)
         </p>
 
         {loading && (
-          <p className="text-slate-500">
+          <p
+            style={{
+              color: "var(--text-secondary)",
+            }}
+          >
             Loading recalls...
           </p>
         )}
@@ -154,9 +157,14 @@ export default function RecallsPage() {
               <div className="mt-8 flex justify-center">
                 <button
                   onClick={() =>
-                    setVisibleCount((count) => count + PAGE_SIZE)
+                    setVisibleCount((v) => v + PAGE_SIZE)
                   }
-                  className="rounded-xl bg-blue-600 px-6 py-3 font-medium text-white transition hover:bg-blue-700"
+                  className="rounded-full px-6 py-3 font-medium transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[var(--shadow-floating)] active:scale-95"
+                  style={{
+                    background: "var(--accent)",
+                    color: "#ffffff",
+                    boxShadow: "var(--shadow-medium)",
+                  }}
                 >
                   Load 50 More
                 </button>

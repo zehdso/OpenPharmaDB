@@ -1,20 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import RecallCard from "./RecallCard";
+
+import RecallCard from "@/components/ui/RecallCard";
 import { useRecalls } from "@/components/RecallProvider";
-
-function formatDate(date: string) {
-  if (!date || date.length !== 8) return date;
-
-  const year = Number(date.slice(0, 4));
-  const month = Number(date.slice(4, 6)) - 1;
-  const day = date.slice(6, 8);
-
-  return `${day} ${new Date(year, month).toLocaleString(undefined, {
-    month: "short",
-  })} ${year}`;
-}
 
 export default function LatestRecalls() {
   const { recalls, loading, error } = useRecalls();
@@ -24,22 +13,34 @@ export default function LatestRecalls() {
     .slice(0, 10);
 
   return (
-    <section className="mx-auto max-w-7xl px-6 py-16">
-      <div className="mb-8 flex items-center justify-between">
-        <h2 className="text-3xl font-bold">
+    <section className="py-10">
+      <div className="mb-6 flex items-center justify-between">
+        <h2
+          className="text-4xl font-bold tracking-tight"
+          style={{ color: "var(--text)" }}
+        >
           Latest Recalls
         </h2>
 
         <Link
           href="/recalls"
-          className="rounded-xl bg-blue-600 px-5 py-3 text-white transition hover:bg-blue-700"
+          className="rounded-full px-6 py-3 font-medium transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[var(--shadow-floating)]"
+          style={{
+            background: "var(--accent)",
+            color: "#ffffff",
+            boxShadow: "var(--shadow-medium)",
+          }}
         >
           View All
         </Link>
       </div>
 
       {loading && (
-        <p className="text-slate-500">
+        <p
+          style={{
+            color: "var(--text-secondary)",
+          }}
+        >
           Loading recalls...
         </p>
       )}
@@ -55,10 +56,8 @@ export default function LatestRecalls() {
           {latest.map((recall) => (
             <RecallCard
               key={recall.id}
-              title={recall.product || recall.title}
-              regulator={recall.regulator}
-              date={formatDate(recall.recall_date)}
-              severity={recall.classification}
+              recall={recall}
+              compact
             />
           ))}
         </div>

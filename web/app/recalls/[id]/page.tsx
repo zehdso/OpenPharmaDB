@@ -1,7 +1,15 @@
 "use client";
 
 import { use } from "react";
+import { motion } from "framer-motion";
+
 import { useRecalls } from "@/components/RecallProvider";
+
+import RecallHeader from "@/components/recall/RecallHeader";
+import RecallHero from "@/components/recall/RecallHero";
+import RecallMetaGrid from "@/components/recall/RecallMetaGrid";
+import RecallReason from "@/components/recall/RecallReason";
+import RecallActions from "@/components/recall/RecallActions";
 
 function formatDate(date: string) {
   if (!date || date.length !== 8) return date;
@@ -24,57 +32,120 @@ export default function RecallDetailsPage({
 
   const { recalls, loading } = useRecalls();
 
-  const recall = recalls.find((r) => r.id === id) ?? null;
+  const recall = recalls.find((r) => r.id === id);
 
   if (loading) {
     return (
-      <main className="mx-auto max-w-5xl px-6 py-16">
-        Loading...
+      <main
+        className="min-h-screen"
+        style={{ background: "var(--bg)" }}
+      >
+        <div className="mx-auto w-full max-w-5xl px-4 py-24 sm:px-6 lg:max-w-6xl">
+          <div
+            className="h-12 w-2/3 animate-pulse rounded-2xl"
+            style={{
+              background: "var(--surface)",
+              boxShadow: "var(--shadow-inset)",
+            }}
+          />
+
+          <div
+            className="mt-6 h-56 animate-pulse rounded-3xl"
+            style={{
+              background: "var(--surface)",
+              boxShadow: "var(--shadow-inset)",
+            }}
+          />
+
+          <div className="mt-6 grid grid-cols-2 gap-4">
+            {[0, 1, 2, 3].map((i) => (
+              <div
+                key={i}
+                className="h-32 animate-pulse rounded-2xl"
+                style={{
+                  background: "var(--surface)",
+                  boxShadow: "var(--shadow-inset)",
+                }}
+              />
+            ))}
+          </div>
+        </div>
       </main>
     );
   }
 
   if (!recall) {
     return (
-      <main className="mx-auto max-w-5xl px-6 py-16">
-        Recall not found.
+      <main
+        className="flex min-h-screen items-center justify-center px-4"
+        style={{ background: "var(--bg)" }}
+      >
+        <div
+          className="rounded-3xl p-8 text-center"
+          style={{
+            background: "var(--card)",
+            boxShadow: "var(--shadow-medium)",
+          }}
+        >
+          <h1
+            className="text-3xl font-bold"
+            style={{ color: "var(--text)" }}
+          >
+            Recall not found
+          </h1>
+
+          <p
+            className="mt-4"
+            style={{
+              color: "var(--text-secondary)",
+            }}
+          >
+            This recall may have been removed or the URL is invalid.
+          </p>
+        </div>
       </main>
     );
   }
 
-  return (
-    <main className="mx-auto max-w-5xl px-6 py-16">
-      <h1 className="text-4xl font-bold">
-        {recall.product || recall.title}
-      </h1>
+  const title = recall.product || recall.title;
+  const formattedDate = formatDate(recall.recall_date);
 
-      <div className="mt-10 space-y-6 rounded-3xl border bg-white p-8 shadow-sm">
-        <Info label="Regulator" value={recall.regulator} />
-        <Info label="Country" value={recall.country} />
-        <Info label="Classification" value={recall.classification} />
-        <Info label="Recall Date" value={formatDate(recall.recall_date)} />
-        <Info label="Reason" value={recall.reason} />
-      </div>
+  return (
+    <main
+      className="relative min-h-screen overflow-x-hidden"
+      style={{ background: "var(--bg)" }}
+    >
+      <RecallHeader title={title} />
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        className="relative z-10 mx-auto w-full max-w-5xl space-y-6 px-4 pb-8 pt-24 sm:px-6 lg:max-w-6xl lg:space-y-8"
+      >
+        <RecallHero
+          title={title}
+          classification={recall.classification}
+          regulator={recall.regulator}
+          country={recall.country}
+          date={formattedDate}
+        />
+
+        <RecallActions
+          title={title}
+        />
+
+        <RecallMetaGrid
+          regulator={recall.regulator}
+          country={recall.country}
+          classification={recall.classification}
+          date={formattedDate}
+        />
+
+        <RecallReason
+          reason={recall.reason}
+        />
+      </motion.div>
     </main>
-  );
-}
-
-function Info({
-  label,
-  value,
-}: {
-  label: string;
-  value: unknown;
-}) {
-  return (
-    <div className="border-b pb-5 last:border-0">
-      <div className="mb-1 text-sm font-medium text-slate-500">
-        {label}
-      </div>
-
-      <div className="text-lg">
-        {value ? String(value) : "—"}
-      </div>
-    </div>
   );
 }

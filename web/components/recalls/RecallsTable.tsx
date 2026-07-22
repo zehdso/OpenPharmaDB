@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import RecallCard from "@/components/ui/RecallCard";
 import { Recall } from "@/lib/recalls";
 
 interface RecallsTableProps {
@@ -23,49 +23,125 @@ export default function RecallsTable({
   recalls,
 }: RecallsTableProps) {
   return (
-    <div className="overflow-x-auto rounded-3xl border border-slate-200 bg-white shadow-sm">
-      <table className="min-w-full">
-        <thead className="border-b bg-slate-100">
-          <tr>
-            <th className="px-6 py-4 text-left font-semibold">Product</th>
-            <th className="px-6 py-4 text-left font-semibold">Regulator</th>
-            <th className="px-6 py-4 text-left font-semibold">Classification</th>
-            <th className="px-6 py-4 text-left font-semibold">Recall Date</th>
-          </tr>
-        </thead>
+    <>
+      <div className="space-y-5 lg:hidden">
+        {recalls.map((recall) => (
+          <RecallCard
+            key={recall.id}
+            recall={recall}
+          />
+        ))}
+      </div>
 
-        <tbody>
-          {recalls.map((recall) => (
-            <tr
-              key={recall.id}
-              className="border-b transition hover:bg-slate-50"
-            >
-              <td className="max-w-lg px-6 py-4">
-                <Link
-                  href={`/recalls/${recall.id}`}
-                  className="block"
-                >
-                  <div className="line-clamp-2 font-medium text-blue-700 hover:underline">
-                    {recall.product || recall.title}
-                  </div>
-                </Link>
-              </td>
+      <div
+        className="hidden overflow-hidden rounded-3xl lg:block"
+        style={{
+          background: "var(--card)",
+          boxShadow: "var(--shadow-medium)",
+        }}
+      >
+        <table className="min-w-full">
+          <thead
+            style={{
+              background: "var(--surface)",
+            }}
+          >
+            <tr>
+              <th
+                className="px-6 py-5 text-left text-sm font-semibold"
+                style={{
+                  color: "var(--text)",
+                }}
+              >
+                Product
+              </th>
 
-              <td className="px-6 py-4 whitespace-nowrap">
-                {recall.regulator}
-              </td>
+              <th
+                className="px-6 py-5 text-left text-sm font-semibold"
+                style={{
+                  color: "var(--text)",
+                }}
+              >
+                Regulator
+              </th>
 
-              <td className="px-6 py-4 whitespace-nowrap">
-                {recall.classification}
-              </td>
+              <th
+                className="px-6 py-5 text-left text-sm font-semibold"
+                style={{
+                  color: "var(--text)",
+                }}
+              >
+                Classification
+              </th>
 
-              <td className="px-6 py-4 whitespace-nowrap">
-                {formatDate(recall.recall_date)}
-              </td>
+              <th
+                className="px-6 py-5 text-left text-sm font-semibold"
+                style={{
+                  color: "var(--text)",
+                }}
+              >
+                Date
+              </th>
             </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
+          </thead>
+
+          <tbody>
+            {recalls.map((recall) => (
+              <tr
+                key={recall.id}
+                className="transition-colors duration-200"
+                style={{
+                  borderTop:
+                    "1px solid color-mix(in srgb, var(--text) 8%, transparent)",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background =
+                    "color-mix(in srgb, var(--surface) 85%, var(--accent) 15%)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = "transparent";
+                }}
+              >
+                <td
+                  className="px-6 py-5 font-medium"
+                  style={{
+                    color: "var(--text)",
+                  }}
+                >
+                  {recall.product || recall.title}
+                </td>
+
+                <td
+                  className="px-6 py-5"
+                  style={{
+                    color: "var(--text-secondary)",
+                  }}
+                >
+                  {recall.regulator}
+                </td>
+
+                <td
+                  className="px-6 py-5"
+                  style={{
+                    color: "var(--text-secondary)",
+                  }}
+                >
+                  {recall.classification}
+                </td>
+
+                <td
+                  className="whitespace-nowrap px-6 py-5"
+                  style={{
+                    color: "var(--text-secondary)",
+                  }}
+                >
+                  {formatDate(recall.recall_date)}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </>
   );
 }
