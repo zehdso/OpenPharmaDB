@@ -2,36 +2,67 @@
 
 [![Tests](https://github.com/zehdso/OpenPharmaDB/actions/workflows/test.yml/badge.svg)](https://github.com/zehdso/OpenPharmaDB/actions/workflows/test.yml)
 
-A unified, open-source pharmaceutical recall database that aggregates recall data from multiple official regulators into one consistent JSON schema.
+A modern, open-source pharmaceutical recall database and web application that aggregates official recall data from multiple regulators into one consistent, searchable platform.
 
-## Features
+## Live Demo
 
-- Unified schema across regulators
+**Website:** https://YOUR-RENDER-URL.onrender.com
+
+> Replace the URL above with your Render or custom domain.
+
+## Preview
+
+![OpenPharmaDB Preview](assets/preview.png)
+
+---
+
+# Features
+
+- Modern responsive web interface
+- Search pharmaceutical recalls instantly
+- Dynamic recall detail pages (`/recalls/[id]`)
+- Unified JSON schema across regulators
 - Official regulator sources only
-- Normalized JSON output
-- Automated validation
+- Automated normalization and validation
+- Extensible architecture for adding new regulators
 - GitHub Actions CI
-- Command-line search
-- Extensible regulator architecture
+- Open-source dataset
 
-## Supported Regulators
+---
+
+# Supported Regulators
 
 | Regulator | Country | Status |
 |-----------|---------|--------|
 | FDA | United States | ✅ |
 | Health Canada | Canada | ✅ |
 
-More regulators are planned.
+More regulators will be added over time.
 
 ---
 
-## Architecture
+# Web Features
 
-```
+- Homepage with latest recalls
+- Recall search
+- Product filtering
+- Responsive mobile layout
+- Individual recall pages
+- Clean modern UI
+- Fast navigation
+- Dark mode support
+- Static export support (GitHub Pages)
+- Full Next.js server support (Render)
+
+---
+
+# Architecture
+
+```text
 Official Regulator
         │
         ▼
- Fetch Raw Data
+ Download Raw Data
         │
         ▼
  Filter Relevant Records
@@ -47,14 +78,19 @@ Official Regulator
         │
         ▼
  Published Dataset
+        │
+        ▼
+ Next.js Web Application
 ```
 
 ---
 
-## Repository Structure
+# Repository Structure
 
 ```text
 OpenPharmaDB/
+├── assets/
+│   └── preview.png
 ├── data/
 │   ├── raw/
 │   ├── normalized/
@@ -64,6 +100,11 @@ OpenPharmaDB/
 │   ├── core/
 │   └── regulators/
 ├── tests/
+├── web/
+│   ├── app/
+│   ├── components/
+│   ├── lib/
+│   └── public/
 ├── .github/
 │   └── workflows/
 ├── openpharmadb.py
@@ -72,47 +113,84 @@ OpenPharmaDB/
 
 ---
 
-## Installation
+# Installation
 
-Clone the repository:
+Clone the repository.
 
 ```bash
 git clone https://github.com/zehdso/OpenPharmaDB.git
 ```
 
-Install dependencies:
+Move into the project.
+
+```bash
+cd OpenPharmaDB
+```
+
+Install Python dependencies.
 
 ```bash
 pip install requests fastjsonschema pytest
 ```
 
----
-
-## Generate Dataset
-
-Run a regulator:
+Install web dependencies.
 
 ```bash
-python -m scripts.regulators.health_canada
+cd web
+npm install
 ```
+
+---
+
+# Running the Web App
+
+Development server:
+
+```bash
+npm run dev
+```
+
+Production build:
+
+```bash
+npm run build
+```
+
+Start production server:
+
+```bash
+npm start
+```
+
+---
+
+# Generate Dataset
+
+Generate FDA data.
 
 ```bash
 python -m scripts.regulators.fda
 ```
 
-Merge datasets:
+Generate Health Canada data.
+
+```bash
+python -m scripts.regulators.health_canada
+```
+
+Merge datasets.
 
 ```bash
 python -m scripts.core.merge
 ```
 
-Validate:
+Validate datasets.
 
 ```bash
 python -m scripts.core.validate
 ```
 
-Run tests:
+Run tests.
 
 ```bash
 pytest
@@ -120,27 +198,27 @@ pytest
 
 ---
 
-## CLI Usage
+# CLI Usage
 
-Search recalls:
+Search recalls.
 
 ```bash
 python openpharmadb.py ibuprofen
 ```
 
-Filter by regulator:
+Filter by regulator.
 
 ```bash
 python openpharmadb.py --regulator FDA
 ```
 
-Filter by country:
+Filter by country.
 
 ```bash
 python openpharmadb.py --country CA
 ```
 
-Limit results:
+Limit results.
 
 ```bash
 python openpharmadb.py ibuprofen --limit 5
@@ -148,9 +226,9 @@ python openpharmadb.py ibuprofen --limit 5
 
 ---
 
-## Dataset Schema
+# Dataset Schema
 
-Each record follows the same schema.
+Every record follows a unified schema.
 
 ```json
 {
@@ -171,28 +249,69 @@ Each record follows the same schema.
 
 ---
 
-## Goals
+# Goals
 
-- Aggregate official pharmaceutical recall data
+- Aggregate official pharmaceutical recall information
+- Standardize data across regulators
 - Preserve regulator-specific metadata
-- Provide a stable public schema
-- Support automation and research
-- Enable easy integration into applications
+- Enable research and analytics
+- Provide a stable public dataset
+- Power modern web applications
+- Support future APIs
 
 ---
 
-## Roadmap
+# Roadmap
 
-- Additional regulators
-- Better CLI search
+- Additional international regulators
+- Advanced search
+- Product categories
 - REST API
 - Python package
-- Web interface
 - Incremental updates
+- Better analytics
+- Downloadable datasets
+- Recall notifications
 - Release automation
 
 ---
 
-## License
+# Technologies
 
-MIT License.
+### Backend
+
+- Python
+- Requests
+- FastJSONSchema
+
+### Frontend
+
+- Next.js 16
+- React
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+
+### Deployment
+
+- Render
+- GitHub Pages
+- GitHub Actions
+
+---
+
+# Contributing
+
+Contributions are welcome.
+
+1. Fork the repository.
+2. Create a feature branch.
+3. Commit your changes.
+4. Push your branch.
+5. Open a Pull Request.
+
+---
+
+# License
+
+This project is licensed under the MIT License.
