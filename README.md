@@ -6,7 +6,7 @@ A modern, open-source pharmaceutical recall database and web application that ag
 
 ## Live Demo
 
-**Website:** https://YOUR-RENDER-URL.onrender.com
+**Website:** https://zehdso.onrender.com
 
 > Replace the URL above with your Render or custom domain.
 
