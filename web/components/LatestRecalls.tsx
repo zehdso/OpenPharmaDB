@@ -45,20 +45,21 @@ export default function LatestRecalls() {
         </p>
       )}
 
-      {error && (
-        <p className="text-red-600">
-          {error}
-        </p>
-      )}
+      {error && <p className="text-red-600">{error}</p>}
 
       {!loading && !error && (
         <div className="space-y-5">
           {latest.map((recall) => (
-            <RecallCard
+            <Link
               key={recall.id}
-              recall={recall}
-              compact
-            />
+              href={`/recalls/${recall.id}`}
+              className="block"
+            >
+              <RecallCard
+                recall={recall}
+                compact
+              />
+            </Link>
           ))}
         </div>
       )}
