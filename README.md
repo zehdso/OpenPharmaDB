@@ -10,8 +10,7 @@ A modern, open-source pharmaceutical recall database and web application that ag
 
 ## Preview
 
-![OpenPharmaDB Preview](assets/preview.png)
-
+[![OpenPharmaDB Preview](assets/preview.png)](https://openpharmadb.onrender.com)
 ---
 
 # Features
