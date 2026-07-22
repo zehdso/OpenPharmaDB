@@ -1,34 +1,23 @@
 "use client";
 
-import {
-  useEffect,
-  useMemo,
-  useState,
-} from "react";
+import { useEffect, useMemo, useState } from "react";
 
 import { PageHeader } from "@/components/layout/PageHeader";
 import { useRecalls } from "@/components/RecallProvider";
 import RecallsTable from "@/components/recalls/RecallsTable";
-import RecallDetails from "@/components/recalls/RecallDetails";
 import SearchBar from "@/components/recalls/SearchBar";
 import FilterBar from "@/components/recalls/FilterBar";
-import type { Recall } from "@/lib/recalls";
 
 const PAGE_SIZE = 50;
 
 export default function RecallsPage() {
   const { recalls, loading, error } = useRecalls();
 
-  const [selectedRecall, setSelectedRecall] =
-    useState<Recall | null>(null);
-
   const [search, setSearch] = useState("");
   const [regulator, setRegulator] = useState("");
-  const [classification, setClassification] =
-    useState("");
+  const [classification, setClassification] = useState("");
   const [country, setCountry] = useState("");
-  const [visibleCount, setVisibleCount] =
-    useState(PAGE_SIZE);
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
 
   useEffect(() => {
     setVisibleCount(PAGE_SIZE);
@@ -52,11 +41,7 @@ export default function RecallsPage() {
 
   const classifications = useMemo(
     () =>
-      [
-        ...new Set(
-          sortedRecalls.map((r) => r.classification)
-        ),
-      ]
+      [...new Set(sortedRecalls.map((r) => r.classification))]
         .filter(Boolean)
         .sort(),
     [sortedRecalls]
@@ -76,23 +61,15 @@ export default function RecallsPage() {
     return sortedRecalls.filter((recall) => {
       const matchesSearch =
         !query ||
-        (recall.product ?? "")
-          .toLowerCase()
-          .includes(query) ||
-        (recall.title ?? "")
-          .toLowerCase()
-          .includes(query) ||
-        (recall.regulator ?? "")
-          .toLowerCase()
-          .includes(query);
+        (recall.product ?? "").toLowerCase().includes(query) ||
+        (recall.title ?? "").toLowerCase().includes(query) ||
+        (recall.regulator ?? "").toLowerCase().includes(query);
 
       return (
         matchesSearch &&
-        (!regulator ||
-          recall.regulator === regulator) &&
+        (!regulator || recall.regulator === regulator) &&
         (!classification ||
-          recall.classification ===
-            classification) &&
+          recall.classification === classification) &&
         (!country || recall.country === country)
       );
     });
@@ -104,44 +81,10 @@ export default function RecallsPage() {
     country,
   ]);
 
-  const visibleRecalls =
-    filteredRecalls.slice(0, visibleCount);
-
-  useEffect(() => {
-    const params = new URLSearchParams(
-      window.location.search
-    );
-
-    const id = params.get("id");
-
-    if (!id) {
-      setSelectedRecall(null);
-      return;
-    }
-
-    const recall =
-      recalls.find((r) => r.id === id) ?? null;
-
-    setSelectedRecall(recall);
-  }, [recalls]);
-
-  function handleSelect(recall: Recall) {
-    setSelectedRecall(recall);
-
-    const url = new URL(window.location.href);
-    url.searchParams.set("id", recall.id);
-
-    window.history.replaceState({}, "", url);
-  }
-
-  function closeDetails() {
-    setSelectedRecall(null);
-
-    const url = new URL(window.location.href);
-    url.searchParams.delete("id");
-
-    window.history.replaceState({}, "", url);
-  }
+  const visibleRecalls = filteredRecalls.slice(
+    0,
+    visibleCount
+  );
 
   return (
     <main
@@ -168,9 +111,7 @@ export default function RecallsPage() {
             classification={classification}
             country={country}
             onRegulatorChange={setRegulator}
-            onClassificationChange={
-              setClassification
-            }
+            onClassificationChange={setClassification}
             onCountryChange={setCountry}
           />
         </div>
@@ -184,6 +125,7 @@ export default function RecallsPage() {
           Showing {visibleRecalls.length.toLocaleString()} of{" "}
           {filteredRecalls.length.toLocaleString()} recall(s)
         </p>
+
         {loading && (
           <p
             style={{
@@ -204,33 +146,10 @@ export default function RecallsPage() {
           <>
             <RecallsTable
               recalls={visibleRecalls}
-              onSelect={handleSelect}
+              onSelect={() => {}}
             />
 
-            {selectedRecall && (
-              <div className="mt-10">
-                <div className="mb-6 flex justify-end">
-                  <button
-                    onClick={closeDetails}
-                    className="rounded-full px-5 py-2 text-sm font-medium transition-all"
-                    style={{
-                      background: "var(--surface)",
-                      color: "var(--text)",
-                      boxShadow: "var(--shadow-soft)",
-                    }}
-                  >
-                    Close
-                  </button>
-                </div>
-
-                <RecallDetails
-                  recall={selectedRecall}
-                />
-              </div>
-            )}
-
-            {visibleCount <
-              filteredRecalls.length && (
+            {visibleCount < filteredRecalls.length && (
               <div className="mt-8 flex justify-center">
                 <button
                   onClick={() =>
@@ -242,8 +161,7 @@ export default function RecallsPage() {
                   style={{
                     background: "var(--accent)",
                     color: "#ffffff",
-                    boxShadow:
-                      "var(--shadow-medium)",
+                    boxShadow: "var(--shadow-medium)",
                   }}
                 >
                   Load 50 More
