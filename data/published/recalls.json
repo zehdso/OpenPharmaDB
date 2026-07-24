@@ -401,6 +401,42 @@
   },
   {
     "schema_version": 1,
+    "id": "82393",
+    "regulator": "Health Canada",
+    "country": "CA",
+    "title": "10392804 Canada Inc. d.b.a Sweet Vengeance recalls certain edible cannabis products due to undeclared milk and hazelnut, and labelling issues",
+    "product": "Certain Social Sessions edible cannabis products",
+    "category": "Cannabis",
+    "classification": "",
+    "reason": "Undeclared food allergen - Labelling and packaging - Suspected quality concern",
+    "recall_date": "2026-07-22",
+    "url": "https://recalls-rappels.canada.ca/en/alert-recall/10392804-canada-inc-dba-sweet-vengeance-recalls-certain-edible-cannabis-products-due",
+    "extras": {
+      "Organization": "Controlled substances and cannabis",
+      "What you should do": "Stop using the products if they are part of the recallReturn the products to the store where you bought them or dispose of them. Dispose of any products that you have opened safely and out of the reach of children and youth.Report any health or safety complaints you have about these or other cannabis products by filling out the Cannabis Reporting Form online.",
+      "Archived": "0"
+    }
+  },
+  {
+    "schema_version": 1,
+    "id": "82367",
+    "regulator": "Health Canada",
+    "country": "CA",
+    "title": "ATTITUDE Bathroom Cleaner Disinfectant: Affected lot may be missing expiry date",
+    "product": "ATTITUDE Bathroom Cleaner Disinfectant",
+    "category": "Drugs",
+    "classification": "Type III",
+    "reason": "Labelling",
+    "recall_date": "2026-07-20",
+    "url": "https://recalls-rappels.canada.ca/en/alert-recall/attitude-bathroom-cleaner-disinfectant-affected-lot-may-be-missing-expiry-date",
+    "extras": {
+      "Organization": "Drugs and health products",
+      "What you should do": "Discontinue use if you have the affected product.Contact the recalling firm if you have any questions about the recall.Report any health product safety&nbsp;complaints&nbsp;to&nbsp;Health Canada.Report any health product&nbsp;related&nbsp;side effects&nbsp;to Health Canada.",
+      "Archived": "0"
+    }
+  },
+  {
+    "schema_version": 1,
     "id": "82324",
     "regulator": "Health Canada",
     "country": "CA",
