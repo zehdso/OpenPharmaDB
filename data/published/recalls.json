@@ -434,6 +434,24 @@
   },
   {
     "schema_version": 1,
+    "id": "82359",
+    "regulator": "Health Canada",
+    "country": "CA",
+    "title": "Harmonic Arts Holy Basil Tincture; Out of Specification (total aerobic microbial count)",
+    "product": "Holy Basil Tincture",
+    "category": "Natural health products",
+    "classification": "Type III",
+    "reason": "Product quality",
+    "recall_date": "2026-07-27",
+    "url": "https://recalls-rappels.canada.ca/en/alert-recall/harmonic-arts-holy-basil-tincture-out-specification-total-aerobic-microbial-count",
+    "extras": {
+      "Organization": "Drugs and health products",
+      "What you should do": "Verify if your product is affected.Consult your healthcare provider prior to discontinuing use of the affected product(s), or for any health concerns.Contact the recalling firm if you have any questions about the recall.Report any health product related&nbsp;side effects&nbsp;to Health Canada.Report any other health product safety&nbsp;complaints to Health Canada.",
+      "Archived": "0"
+    }
+  },
+  {
+    "schema_version": 1,
     "id": "82393",
     "regulator": "Health Canada",
     "country": "CA",
