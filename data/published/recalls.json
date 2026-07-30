@@ -434,6 +434,24 @@
   },
   {
     "schema_version": 1,
+    "id": "82404",
+    "regulator": "Health Canada",
+    "country": "CA",
+    "title": "Oxygen 100%: Gas cylinders containing commercial grade oxygen",
+    "product": "OXYGEN 100%",
+    "category": "Drugs",
+    "classification": "Type III",
+    "reason": "Product quality",
+    "recall_date": "2026-07-28",
+    "url": "https://recalls-rappels.canada.ca/en/alert-recall/oxygen-100-gas-cylinders-containing-commercial-grade-oxygen",
+    "extras": {
+      "Organization": "Drugs and health products",
+      "What you should do": "Consult your healthcare provider for any health concerns.Contact the recalling firm if you have any questions about the recall.Report any health product&nbsp;related&nbsp;side effects&nbsp;to Health Canada.Report any other health product safety&nbsp;complaints&nbsp;to&nbsp;Health Canada.",
+      "Archived": "0"
+    }
+  },
+  {
+    "schema_version": 1,
     "id": "82359",
     "regulator": "Health Canada",
     "country": "CA",
