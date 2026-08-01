@@ -434,6 +434,42 @@
   },
   {
     "schema_version": 1,
+    "id": "82418",
+    "regulator": "Health Canada",
+    "country": "CA",
+    "title": "Pharmasave Regular Strength Dairy Digestive Supplement Lactase Enzyme: Affected lot is labelled with the incorrect Natural Product Number (NPN) on the carton. ",
+    "product": "Pharmasave Regular Strength Dairy Digestive Supplement Lactase Enzyme",
+    "category": "Natural health products",
+    "classification": "",
+    "reason": "Labelling",
+    "recall_date": "2026-07-30",
+    "url": "https://recalls-rappels.canada.ca/en/alert-recall/pharmasave-regular-strength-dairy-digestive-supplement-lactase-enzyme-affected-lot",
+    "extras": {
+      "Organization": "Drugs and health products",
+      "What you should do": "Verify whether your product is affected.Consult your healthcare provider prior to&nbsp;discontinuing&nbsp;use of the affected product,&nbsp;or&nbsp;for any health concerns.Contact the recalling firm if you have any questions about the recall.Report any health product&nbsp;related&nbsp;side effects&nbsp;to Health Canada.Report any other health product safety&nbsp;complaints&nbsp;to&nbsp;Health Canada.",
+      "Archived": "0"
+    }
+  },
+  {
+    "schema_version": 1,
+    "id": "82416",
+    "regulator": "Health Canada",
+    "country": "CA",
+    "title": "Femyso: Affected lot may contain two green Mifepristone cartons or two pink Misoprostol cartons instead of one of each.",
+    "product": "Femyso Mifepristone 200mg / Misoprostol 200 mcg tablet",
+    "category": "Drugs",
+    "classification": "Type II",
+    "reason": "Packaging",
+    "recall_date": "2026-07-30",
+    "url": "https://recalls-rappels.canada.ca/en/alert-recall/femyso-affected-lot-may-contain-two-green-mifepristone-cartons-or-two-pink-misoprostol",
+    "extras": {
+      "Organization": "Drugs and health products",
+      "What you should do": "Verify whether your product is affected.Consult your healthcare provider prior to discontinuing use of the affected product, or if you have any health concerns.Contact the recalling firm if you have any questions about the recall.Report any health product&nbsp;related&nbsp;side effects&nbsp;to Health Canada.Report any other health product safety&nbsp;complaints&nbsp;to&nbsp;Health Canada.",
+      "Archived": "0"
+    }
+  },
+  {
+    "schema_version": 1,
     "id": "82404",
     "regulator": "Health Canada",
     "country": "CA",
