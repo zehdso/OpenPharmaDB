@@ -1,6 +1,39 @@
 [
   {
     "schema_version": 1,
+    "id": "99387",
+    "regulator": "FDA",
+    "country": "US",
+    "title": "Organic Moringa Powder; 15kg/bag (bulk);  Product code: GJ96",
+    "product": "Organic Moringa Powder; 15kg/bag (bulk);  Product code: GJ96",
+    "category": null,
+    "classification": "Class I",
+    "reason": "Moringa Powder ingredient positive for salmonella",
+    "recall_date": "20260708",
+    "url": null,
+    "extras": {
+      "status": "Ongoing",
+      "city": "Cerritos",
+      "state": "CA",
+      "country": "United States",
+      "openfda": {},
+      "product_type": "Food",
+      "recalling_firm": "Green Jeeva LLC",
+      "address_1": "16200 Carmenita Rd Ste A",
+      "address_2": "N/A",
+      "postal_code": "90703-2255",
+      "voluntary_mandated": "Voluntary: Firm initiated",
+      "initial_firm_notification": "E-Mail",
+      "distribution_pattern": "Product was distributed to 4 different consignees who have used the ingredient for further processing and distribution.",
+      "recall_number": "H-1180-2026",
+      "product_quantity": "2,490 kg",
+      "center_classification_date": "20260721",
+      "report_date": "20260729",
+      "code_info": "lot: 25/08001 Expiration date: 02-11-2028"
+    }
+  },
+  {
+    "schema_version": 1,
     "id": "98982",
     "regulator": "FDA",
     "country": "US",
@@ -3044,7 +3077,7 @@
     "recall_date": "20250329",
     "url": null,
     "extras": {
-      "status": "Ongoing",
+      "status": "Terminated",
       "city": "Elizabethtown",
       "state": "PA",
       "country": "United States",
@@ -3060,6 +3093,7 @@
       "recall_number": "F-0769-2025",
       "product_quantity": "6984 Units",
       "center_classification_date": "20250509",
+      "termination_date": "20260729",
       "report_date": "20250521",
       "code_info": "Pallet Lot #s: 112, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179,180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202,203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216"
     }
@@ -18693,39 +18727,6 @@
       "postal_code": "48135-1545",
       "voluntary_mandated": "Voluntary: Firm initiated",
       "status": "Terminated"
-    }
-  },
-  {
-    "schema_version": 1,
-    "id": "87464",
-    "regulator": "FDA",
-    "country": "US",
-    "title": "MG Foods TURKEY & PROVOLONE BLT ON A BUTTERY CROISSANT, Net Wt. 8.1oz (229g), MG Foods Charlotte, NC 28208, UPC 1 00000 50065 1",
-    "product": "MG Foods TURKEY & PROVOLONE BLT ON A BUTTERY CROISSANT, Net Wt. 8.1oz (229g), MG Foods Charlotte, NC 28208, UPC 1 00000 50065 1",
-    "category": null,
-    "classification": "Class I",
-    "reason": "The firm received positive test results for Listeria monocytogenes during in house environmental sampling on one of their meat slicers.",
-    "recall_date": "20210302",
-    "url": null,
-    "extras": {
-      "status": "Ongoing",
-      "city": "Charlotte",
-      "state": "NC",
-      "country": "United States",
-      "openfda": {},
-      "product_type": "Food",
-      "recalling_firm": "Canteen Inc. dba MG Foods, Inc.",
-      "address_1": "1907 Gateway Blvd",
-      "address_2": "N/A",
-      "postal_code": "28208-2748",
-      "voluntary_mandated": "Voluntary: Firm initiated",
-      "initial_firm_notification": "Telephone",
-      "distribution_pattern": "Product was shipped to the following states: GA, NC, SC & WV.",
-      "recall_number": "F-0418-2021",
-      "product_quantity": "65 Sandwiches",
-      "center_classification_date": "20210407",
-      "report_date": "20210414",
-      "code_info": "EXP 03/07/21"
     }
   },
   {
