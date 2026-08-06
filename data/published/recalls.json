@@ -467,6 +467,24 @@
   },
   {
     "schema_version": 1,
+    "id": "82429",
+    "regulator": "Health Canada",
+    "country": "CA",
+    "title": "JAMP Methotrexate 10 mg Tablets: Affected lots may contain oversized tablets.",
+    "product": "JAMP Methotrexate 10 mg Tablets ",
+    "category": "Drugs",
+    "classification": "Type II",
+    "reason": "Product quality",
+    "recall_date": "2026-08-05",
+    "url": "https://recalls-rappels.canada.ca/en/alert-recall/jamp-methotrexate-10-mg-tablets-affected-lots-may-contain-oversized-tablets",
+    "extras": {
+      "Organization": "Drugs and health products",
+      "What you should do": "Verify whether your product is affected.Consult your healthcare provider prior to discontinuing use of the affected product, or if you have any health concerns.Contact the recalling firm if you have any questions about the recall.Report any health product&nbsp;related&nbsp;side effects&nbsp;to Health Canada.Report any other health product safety&nbsp;complaints&nbsp;to&nbsp;Health Canada.",
+      "Archived": "0"
+    }
+  },
+  {
+    "schema_version": 1,
     "id": "82418",
     "regulator": "Health Canada",
     "country": "CA",
