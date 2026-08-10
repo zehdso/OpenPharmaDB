@@ -43,6 +43,7 @@ jobs:
         run: pytest
 
       - name: Commit changes
+        id: commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -51,7 +52,13 @@ jobs:
 
           if git diff --cached --quiet; then
             echo "No dataset changes."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             git commit -m "Update recall dataset"
             git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
+
+      - name: Trigger Render deploy
+        if: steps.commit.outputs.changed == 'true'
+        run: curl -fsS -X POST "${{ secrets.RENDER_DEPLOY_HOOK }}"
