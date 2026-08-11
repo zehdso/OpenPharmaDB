@@ -467,6 +467,24 @@
   },
   {
     "schema_version": 1,
+    "id": "82461",
+    "regulator": "Health Canada",
+    "country": "CA",
+    "title": "TEVA-ECTOSONE 0.1% Cream; Affected lot may be missing lot number and expiry date",
+    "product": "TEVA-ECTOSONE 0.1% Cream",
+    "category": "Drugs",
+    "classification": "Type II",
+    "reason": "Labelling",
+    "recall_date": "2026-08-07",
+    "url": "https://recalls-rappels.canada.ca/en/alert-recall/teva-ectosone-01-cream-affected-lot-may-be-missing-lot-number-and-expiry-date",
+    "extras": {
+      "Organization": "Drugs and health products",
+      "What you should do": "Verify if your product is affected. If the lot number and expiry date are missing, your product may be affected by this recall.Consult your healthcare provider prior to discontinuing use of the affected product(s), or for any health concerns.Contact the recalling firm if you have any questions about the recall.Report any health product&nbsp;related&nbsp;side effects&nbsp;to Health Canada.Report any other health product safety&nbsp;complaints&nbsp;to&nbsp;Health Canada.",
+      "Archived": "0"
+    }
+  },
+  {
+    "schema_version": 1,
     "id": "82429",
     "regulator": "Health Canada",
     "country": "CA",
