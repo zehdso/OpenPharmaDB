@@ -3181,7 +3181,7 @@
     "recall_date": "20250325",
     "url": null,
     "extras": {
-      "status": "Ongoing",
+      "status": "Terminated",
       "city": "Baldwin Park",
       "state": "CA",
       "country": "United States",
@@ -3197,6 +3197,7 @@
       "recall_number": "H-0394-2026",
       "product_quantity": "5,020 lbs",
       "center_classification_date": "20260114",
+      "termination_date": "20260804",
       "report_date": "20260121",
       "code_info": "Lot codes: 058.25 & 070.25"
     }
