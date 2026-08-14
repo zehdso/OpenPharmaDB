@@ -467,6 +467,60 @@
   },
   {
     "schema_version": 1,
+    "id": "82479",
+    "regulator": "Health Canada",
+    "country": "CA",
+    "title": "pms-IRBESARTAN: Affected lot may contain pms-IRBESARTAN/HCTZ 150/12.5 mg tablets.",
+    "product": "pms-IRBESARTAN 150 mg Tablet",
+    "category": "Drugs",
+    "classification": "Type II",
+    "reason": "Contamination",
+    "recall_date": "2026-08-12",
+    "url": "https://recalls-rappels.canada.ca/en/alert-recall/pms-irbesartan-affected-lot-may-contain-pms-irbesartanhctz-150125-mg-tablets",
+    "extras": {
+      "Organization": "Drugs and health products",
+      "What you should do": "Verify whether your product is affected.Consult your healthcare provider prior to discontinuing use of the affected product, or if you have any health concerns.Contact the recalling firm if you have any questions about the recall.Report any health product&nbsp;related&nbsp;side effects&nbsp;to Health Canada.Report any other health product safety&nbsp;complaints&nbsp;to&nbsp;Health Canada.",
+      "Archived": "0"
+    }
+  },
+  {
+    "schema_version": 1,
+    "id": "82459",
+    "regulator": "Health Canada",
+    "country": "CA",
+    "title": "Adequan I.M: Presence of particulate matter",
+    "product": "Adequan I.M",
+    "category": "Veterinary drugs",
+    "classification": "Type III",
+    "reason": "Product quality",
+    "recall_date": "2026-08-12",
+    "url": "https://recalls-rappels.canada.ca/en/alert-recall/adequan-im-presence-particulate-matter",
+    "extras": {
+      "Organization": "Drugs and health products",
+      "What you should do": "Verify if your product is affected.Consult your healthcare provider prior to discontinuing use of the affected product, or for any health concerns.Contact the recalling firm if you have any questions about the recall.Report any health product&nbsp;related&nbsp;side effects&nbsp;to Health Canada.Report any other health product safety&nbsp;complaints&nbsp;to&nbsp;Health Canada.",
+      "Archived": "0"
+    }
+  },
+  {
+    "schema_version": 1,
+    "id": "82477",
+    "regulator": "Health Canada",
+    "country": "CA",
+    "title": "Semaglutide Injection: Incorrect Pen in Package",
+    "product": "Semaglutide Injection",
+    "category": "Drugs",
+    "classification": "Type II",
+    "reason": "Packaging",
+    "recall_date": "2026-08-11",
+    "url": "https://recalls-rappels.canada.ca/en/alert-recall/semaglutide-injection-incorrect-pen-package",
+    "extras": {
+      "Organization": "Drugs and health products",
+      "What you should do": "Verify if your product is affected.Consult your healthcare provider prior to discontinuing use of the affected product, or for any health concerns.Contact the recalling firm if you have any questions about the recall.Report any health product&nbsp;related&nbsp;side effects&nbsp;to Health Canada.Report any other health product safety&nbsp;complaints&nbsp;to&nbsp;Health Canada.",
+      "Archived": "0"
+    }
+  },
+  {
+    "schema_version": 1,
     "id": "82461",
     "regulator": "Health Canada",
     "country": "CA",
