@@ -534,6 +534,24 @@
   },
   {
     "schema_version": 1,
+    "id": "82514",
+    "regulator": "Health Canada",
+    "country": "CA",
+    "title": "Importation of South Korean-Authorized BONKY Injection,                                                                                            1 mcg/mL Calcitriol, due to the Current Shortage of Canadian-Authorized Calcitriol Injection USP, 1 mcg/mL",
+    "product": "BONKY  Injection,  1 mcg/mL Calcitriol",
+    "category": "Drugs",
+    "classification": "",
+    "reason": "Supply - Product safety - Labelling",
+    "recall_date": "2026-08-24",
+    "url": "https://recalls-rappels.canada.ca/en/alert-recall/importation-south-korean-authorized-bonky-injection-1-mcgml-calcitriol-due-current",
+    "extras": {
+      "Organization": "Marketed health products",
+      "What you should do": "",
+      "Archived": "0"
+    }
+  },
+  {
+    "schema_version": 1,
     "id": "82501",
     "regulator": "Health Canada",
     "country": "CA",
