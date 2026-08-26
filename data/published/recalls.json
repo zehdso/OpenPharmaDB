@@ -376,7 +376,7 @@
     "recall_date": "20260403",
     "url": null,
     "extras": {
-      "status": "Ongoing",
+      "status": "Terminated",
       "city": "Miami",
       "state": "FL",
       "country": "United States",
@@ -392,6 +392,7 @@
       "recall_number": "H-0932-2026",
       "product_quantity": "809 (16-oz) units",
       "center_classification_date": "20260609",
+      "termination_date": "20260817",
       "report_date": "20260617",
       "code_info": "Expiration Date: From 04/03/2026 to 05/03/2026 Lot#034320462, 034320562, 034320662, 034320962, 034321062, 034321162, 034321262, 034321362, 034321662, 034321762, 034321862, 034321962, 034322062, 034322362, 034322462, 034322562, 034322662, 034322762, 034323062, 034323162, 044320162, 044320262, 044320362"
     }
@@ -530,6 +531,24 @@
       "termination_date": "20260811",
       "report_date": "20260211",
       "code_info": "Lot Codes: Passion Fruit- F1001, F1002, F1003, F1004, F1005, F1006, F1007, F1008, F2001, F2002"
+    }
+  },
+  {
+    "schema_version": 1,
+    "id": "82524",
+    "regulator": "Health Canada",
+    "country": "CA",
+    "title": "Twins Herbal Products: Undeclared prescription drug (sildenafil)",
+    "product": "Twins Herbal Idakole and Twins Herbal Pelorie",
+    "category": "Drugs",
+    "classification": "Type I",
+    "reason": "Undeclared substance",
+    "recall_date": "2026-08-25",
+    "url": "https://recalls-rappels.canada.ca/en/alert-recall/twins-herbal-products-undeclared-prescription-drug-sildenafil",
+    "extras": {
+      "Organization": "Drugs and health products",
+      "What you should do": "&nbsp;Discontinue use of the affected products. Consult your healthcare provider for any health concerns.Do not buy or use unauthorized health products. Authorized health products have an eight-digit Drug Identification Number (DIN), Natural Product Number (NPN) or Homeopathic Drug Number (DIN-HM). You can also check whether products are authorized for sale by searching Health Canada's&nbsp;Drug Product Database or Licensed Natural Health Products Database.Contact the recalling firm if you have any questions about the recall.Report any health product related&nbsp;side effects&nbsp;to Health Canada.Report any other health product safety&nbsp;complaints to Health Canada.",
+      "Archived": "0"
     }
   },
   {
@@ -3491,7 +3510,7 @@
     "recall_date": "20250109",
     "url": null,
     "extras": {
-      "status": "Ongoing",
+      "status": "Terminated",
       "city": "Hicksville",
       "state": "NY",
       "country": "United States",
@@ -3507,6 +3526,7 @@
       "recall_number": "F-0568-2025",
       "product_quantity": "unknown",
       "center_classification_date": "20250219",
+      "termination_date": "20260819",
       "report_date": "20250226",
       "code_info": "Best Before December 2027"
     }
