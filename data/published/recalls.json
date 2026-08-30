@@ -535,6 +535,42 @@
   },
   {
     "schema_version": 1,
+    "id": "82536",
+    "regulator": "Health Canada",
+    "country": "CA",
+    "title": "Apo-Semaglutide Injection : Incorrect dose display",
+    "product": "Apo-Semaglutide",
+    "category": "Drugs",
+    "classification": "Type II",
+    "reason": "Product quality",
+    "recall_date": "2026-08-27",
+    "url": "https://recalls-rappels.canada.ca/en/alert-recall/apo-semaglutide-injection-incorrect-dose-display",
+    "extras": {
+      "Organization": "Drugs and health products",
+      "What you should do": "Verify if your product is affected.Consult your healthcare provider prior to discontinuing use of the affected product, or for any health concerns.Contact the recalling firm if you have any questions about the recall.Report any health product&nbsp;related&nbsp;side effects&nbsp;to Health Canada.Report any other health product safety&nbsp;complaints&nbsp;to&nbsp;Health Canada.",
+      "Archived": "0"
+    }
+  },
+  {
+    "schema_version": 1,
+    "id": "82537",
+    "regulator": "Health Canada",
+    "country": "CA",
+    "title": "Semaglutide Injection : Out-of-Specification (Impurity)",
+    "product": "Semaglutide Injection",
+    "category": "Drugs",
+    "classification": "Type II",
+    "reason": "Product quality",
+    "recall_date": "2026-08-26",
+    "url": "https://recalls-rappels.canada.ca/en/alert-recall/semaglutide-injection-out-specification-impurity",
+    "extras": {
+      "Organization": "Drugs and health products",
+      "What you should do": "Verify if your product is affected.Consult your healthcare provider prior to discontinuing use of the affected product, or for any health concerns.Contact the recalling firm if you have any questions about the recall.Report any health product&nbsp;related&nbsp;side effects&nbsp;to Health Canada.Report any other health product safety&nbsp;complaints&nbsp;to&nbsp;Health Canada.",
+      "Archived": "0"
+    }
+  },
+  {
+    "schema_version": 1,
     "id": "82524",
     "regulator": "Health Canada",
     "country": "CA",
