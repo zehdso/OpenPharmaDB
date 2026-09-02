@@ -535,6 +535,24 @@
   },
   {
     "schema_version": 1,
+    "id": "82571",
+    "regulator": "Health Canada",
+    "country": "CA",
+    "title": "JAMP Temozolomide: Out-of-Specification (Assay)",
+    "product": "JAMP Temozolomide ",
+    "category": "Drugs",
+    "classification": "Type II",
+    "reason": "Product quality",
+    "recall_date": "2026-08-31",
+    "url": "https://recalls-rappels.canada.ca/en/alert-recall/jamp-temozolomide-out-specification-assay",
+    "extras": {
+      "Organization": "Drugs and health products",
+      "What you should do": "Verify if your product is affected.Consult your healthcare provider prior to discontinuing use of the affected product, or for any health concerns.Contact the recalling firm if you have any questions about the recall.Report any health product&nbsp;related&nbsp;side effects&nbsp;to Health Canada.Report any other health product safety&nbsp;complaints&nbsp;to&nbsp;Health Canada.",
+      "Archived": "0"
+    }
+  },
+  {
+    "schema_version": 1,
     "id": "82536",
     "regulator": "Health Canada",
     "country": "CA",
