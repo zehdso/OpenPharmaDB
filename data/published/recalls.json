@@ -635,6 +635,60 @@
   },
   {
     "schema_version": 1,
+    "id": "82618",
+    "regulator": "Health Canada",
+    "country": "CA",
+    "title": "Organika® Gummies: Foreign site not listed on site licence",
+    "product": "Organika® Lion's Mane Gummies; Organika® Reishi Gummies; Organika® Creatine Gummies",
+    "category": "Natural health products",
+    "classification": "Type III",
+    "reason": "Establishment/Site licensing",
+    "recall_date": "2026-09-15",
+    "url": "https://recalls-rappels.canada.ca/en/alert-recall/organikar-gummies-foreign-site-not-listed-site-licence",
+    "extras": {
+      "Organization": "Drugs and health products",
+      "What you should do": "Verify if your product is affected.Consult your healthcare provider prior to discontinuing use of the affected product, or for any health concerns.Contact the recalling firm if you have any questions about the recall.Report any health product&nbsp;related&nbsp;side effects&nbsp;to Health Canada.Report any other health product safety&nbsp;complaints&nbsp;to&nbsp;Health Canada.",
+      "Archived": "0"
+    }
+  },
+  {
+    "schema_version": 1,
+    "id": "82617",
+    "regulator": "Health Canada",
+    "country": "CA",
+    "title": "Olli Brands Inc. recalls Olli StikiStix Multipack Sour Razzy Pink Lemonade (300 CBG 100 THC) due to labelling issues",
+    "product": "Olli StikiStix Multipack Sour Razzy Pink Lemonade (300 CBG 100 THC) – co-packed edible cannabis",
+    "category": "Cannabis",
+    "classification": "",
+    "reason": "Labelling and packaging",
+    "recall_date": "2026-09-15",
+    "url": "https://recalls-rappels.canada.ca/en/alert-recall/olli-brands-inc-recalls-olli-stikistix-multipack-sour-razzy-pink-lemonade-300-cbg-100",
+    "extras": {
+      "Organization": "Controlled substances and cannabis",
+      "What you should do": "Check to see if your products are affected.Contact the store where you bought the product if you wish to return it.Report any health or safety complaints you have about these or other cannabis products by filling out the Cannabis Reporting Form online.",
+      "Archived": "0"
+    }
+  },
+  {
+    "schema_version": 1,
+    "id": "82620",
+    "regulator": "Health Canada",
+    "country": "CA",
+    "title": "TZIELD (teplizumab) and the Risk of Viral Reactivation",
+    "product": "TZIELD, teplizumab for injection, 2 mg per 2 mL (1 mg/mL) for intravenous infusion",
+    "category": "Biologic or vaccine",
+    "classification": "",
+    "reason": "New safety information - Adverse reaction - Product safety",
+    "recall_date": "2026-09-14",
+    "url": "https://recalls-rappels.canada.ca/en/alert-recall/tzield-teplizumab-and-risk-viral-reactivation",
+    "extras": {
+      "Organization": "Marketed health products",
+      "What you should do": "",
+      "Archived": "0"
+    }
+  },
+  {
+    "schema_version": 1,
     "id": "82571",
     "regulator": "Health Canada",
     "country": "CA",
