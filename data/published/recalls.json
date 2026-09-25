@@ -668,6 +668,24 @@
   },
   {
     "schema_version": 1,
+    "id": "82660",
+    "regulator": "Health Canada",
+    "country": "CA",
+    "title": "IMAAVY: Affected lots may contain glass particles",
+    "product": "IMAAVY Solution",
+    "category": "Biologic or vaccine",
+    "classification": "Type II",
+    "reason": "Product quality",
+    "recall_date": "2026-09-21",
+    "url": "https://recalls-rappels.canada.ca/en/alert-recall/imaavy-affected-lots-may-contain-glass-particles",
+    "extras": {
+      "Organization": "Drugs and health products",
+      "What you should do": "Verify if your product is affected.Consult your healthcare provider for any health concerns.Contact the recalling firm if you have any questions about the recall.Report any health product&nbsp;related&nbsp;side effects&nbsp;to Health Canada.Report any other health product safety&nbsp;complaints&nbsp;to&nbsp;Health Canada.",
+      "Archived": "0"
+    }
+  },
+  {
+    "schema_version": 1,
     "id": "82628",
     "regulator": "Health Canada",
     "country": "CA",
