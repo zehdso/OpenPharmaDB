@@ -770,6 +770,24 @@
   },
   {
     "schema_version": 1,
+    "id": "82684",
+    "regulator": "Health Canada",
+    "country": "CA",
+    "title": "PMS-FAMPRIDINE 10 mg Tablet: Affected lot may contain foreign material particles.",
+    "product": "PMS-FAMPRIDINE ",
+    "category": "Drugs",
+    "classification": "Type II",
+    "reason": "Contamination",
+    "recall_date": "2026-10-06",
+    "url": "https://recalls-rappels.canada.ca/en/alert-recall/pms-fampridine-10-mg-tablet-affected-lot-may-contain-foreign-material-particles",
+    "extras": {
+      "Organization": "Drugs and health products",
+      "What you should do": "Verify if your product is affected.Consult your healthcare provider prior to discontinuing use of the affected product, or for any health concerns.Contact the recalling firm if you have any questions about the recall.Report any health product&nbsp;related&nbsp;side effects&nbsp;to Health Canada.Report any other health product safety&nbsp;complaints&nbsp;to&nbsp;Health Canada.",
+      "Archived": "0"
+    }
+  },
+  {
+    "schema_version": 1,
     "id": "82722",
     "regulator": "Health Canada",
     "country": "CA",
@@ -798,24 +816,6 @@
     "reason": "Product quality",
     "recall_date": "2026-10-05",
     "url": "https://recalls-rappels.canada.ca/en/alert-recall/pdp-diphenhydramine-25-mg-capsule-out-specification-impurity",
-    "extras": {
-      "Organization": "Drugs and health products",
-      "What you should do": "Verify if your product is affected.Consult your healthcare provider prior to discontinuing use of the affected product, or for any health concerns.Contact the recalling firm if you have any questions about the recall.Report any health product&nbsp;related&nbsp;side effects&nbsp;to Health Canada.Report any other health product safety&nbsp;complaints&nbsp;to&nbsp;Health Canada.",
-      "Archived": "0"
-    }
-  },
-  {
-    "schema_version": 1,
-    "id": "82684",
-    "regulator": "Health Canada",
-    "country": "CA",
-    "title": "PMS-FAMPRIDINE 10 mg Tablet: Affected lot may contain foreign material particles.",
-    "product": "PMS-FAMPRIDINE ",
-    "category": "Drugs",
-    "classification": "Type II",
-    "reason": "Contamination",
-    "recall_date": "2026-09-28",
-    "url": "https://recalls-rappels.canada.ca/en/alert-recall/pms-fampridine-10-mg-tablet-affected-lot-may-contain-foreign-material-particles",
     "extras": {
       "Organization": "Drugs and health products",
       "What you should do": "Verify if your product is affected.Consult your healthcare provider prior to discontinuing use of the affected product, or for any health concerns.Contact the recalling firm if you have any questions about the recall.Report any health product&nbsp;related&nbsp;side effects&nbsp;to Health Canada.Report any other health product safety&nbsp;complaints&nbsp;to&nbsp;Health Canada.",
