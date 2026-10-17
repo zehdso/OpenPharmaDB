@@ -734,6 +734,60 @@
   },
   {
     "schema_version": 1,
+    "id": "82786",
+    "regulator": "Health Canada",
+    "country": "CA",
+    "title": "Flintstones Complete Multivitamins and Minerals: Recalled from wholesalers (Distribution Error)",
+    "product": "Flintstones Complete Multivitamins and Minerals",
+    "category": "Natural health products",
+    "classification": "Type III",
+    "reason": "Other",
+    "recall_date": "2026-10-15",
+    "url": "https://recalls-rappels.canada.ca/en/alert-recall/flintstones-complete-multivitamins-and-minerals-recalled-wholesalers-distribution",
+    "extras": {
+      "Organization": "Drugs and health products",
+      "What you should do": "Verify if your product is affected.Consult your healthcare provider prior to discontinuing use of the affected product, or for any health concerns.Contact the recalling firm if you have any questions about the recall.Report any health product&nbsp;related&nbsp;side effects&nbsp;to Health Canada.Report any other health product safety&nbsp;complaints&nbsp;to&nbsp;Health Canada.",
+      "Archived": "0"
+    }
+  },
+  {
+    "schema_version": 1,
+    "id": "82783",
+    "regulator": "Health Canada",
+    "country": "CA",
+    "title": "Claritin Allergy Tablets 10 mg: Recalled from wholesalers (Distribution Error)",
+    "product": "Claritin Allergy Tablets",
+    "category": "Drugs",
+    "classification": "Type III",
+    "reason": "Other",
+    "recall_date": "2026-10-15",
+    "url": "https://recalls-rappels.canada.ca/en/alert-recall/claritin-allergy-tablets-10-mg-recalled-wholesalers-distribution-error",
+    "extras": {
+      "Organization": "Drugs and health products",
+      "What you should do": "Verify if your product is affected.Consult your healthcare provider prior to discontinuing use of the affected product, or for any health concerns.Contact the recalling firm if you have any questions about the recall.Report any health product&nbsp;related&nbsp;side effects&nbsp;to Health Canada.Report any other health product safety&nbsp;complaints&nbsp;to&nbsp;Health Canada.",
+      "Archived": "0"
+    }
+  },
+  {
+    "schema_version": 1,
+    "id": "82781",
+    "regulator": "Health Canada",
+    "country": "CA",
+    "title": "Aleve 200 mg caplets: Recalled from wholesalers (Distribution Error)",
+    "product": "Aleve ",
+    "category": "Drugs",
+    "classification": "Type III",
+    "reason": "Other",
+    "recall_date": "2026-10-15",
+    "url": "https://recalls-rappels.canada.ca/en/alert-recall/aleve-200-mg-caplets-recalled-wholesalers-distribution-error",
+    "extras": {
+      "Organization": "Drugs and health products",
+      "What you should do": "Verify if your product is affected.Consult your healthcare provider prior to discontinuing use of the affected product, or for any health concerns.Contact the recalling firm if you have any questions about the recall.Report any health product&nbsp;related&nbsp;side effects&nbsp;to Health Canada.Report any other health product safety&nbsp;complaints&nbsp;to&nbsp;Health Canada.",
+      "Archived": "0"
+    }
+  },
+  {
+    "schema_version": 1,
     "id": "82726",
     "regulator": "Health Canada",
     "country": "CA",
