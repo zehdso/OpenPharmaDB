@@ -734,6 +734,24 @@
   },
   {
     "schema_version": 1,
+    "id": "82808",
+    "regulator": "Health Canada",
+    "country": "CA",
+    "title": "Dantrium Intravenous (Dantrolene sodium for injection): Presence of particulate matter",
+    "product": "Dantrium Intravenous (Dantrolene sodium for injection) ",
+    "category": "Drugs",
+    "classification": "Type I",
+    "reason": "Contamination",
+    "recall_date": "2026-10-19",
+    "url": "https://recalls-rappels.canada.ca/en/alert-recall/dantrium-intravenous-dantrolene-sodium-injection-presence-particulate-matter",
+    "extras": {
+      "Organization": "Drugs and health products",
+      "What you should do": "Consult your healthcare provider for any health concerns.Contact the recalling firm if you have any questions about the recall.Report any health product&nbsp;related&nbsp;side effects&nbsp;to Health Canada.Report any other health product safety&nbsp;complaints&nbsp;to&nbsp;Health Canada.",
+      "Archived": "0"
+    }
+  },
+  {
+    "schema_version": 1,
     "id": "82786",
     "regulator": "Health Canada",
     "country": "CA",
