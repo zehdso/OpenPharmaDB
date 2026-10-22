@@ -734,6 +734,42 @@
   },
   {
     "schema_version": 1,
+    "id": "82831",
+    "regulator": "Health Canada",
+    "country": "CA",
+    "title": "Femyso: Affected lot may contain two green Mifepristone cartons or two pink Misoprostol cartons instead of one of each.",
+    "product": "Femyso Mifepristone 200mg / Misoprostol 200 mcg tablet",
+    "category": "Drugs",
+    "classification": "Type II",
+    "reason": "Packaging",
+    "recall_date": "2026-10-21",
+    "url": "https://recalls-rappels.canada.ca/en/alert-recall/femyso-affected-lot-may-contain-two-green-mifepristone-cartons-or-two-pink-0",
+    "extras": {
+      "Organization": "Drugs and health products",
+      "What you should do": "Verify whether your product is affected.Consult your healthcare provider prior to discontinuing use of the affected product, or if you have any health concerns.Contact the recalling firm if you have any questions about the recall.Report any health product&nbsp;related&nbsp;side effects&nbsp;to Health Canada.Report any other health product safety&nbsp;complaints&nbsp;to&nbsp;Health Canada.",
+      "Archived": "0"
+    }
+  },
+  {
+    "schema_version": 1,
+    "id": "82825",
+    "regulator": "Health Canada",
+    "country": "CA",
+    "title": "Galaxie Brands Corporation recalls OVERTIME Punch Out due to labelling issue",
+    "product": "OVERTIME Punch Out dried cannabis flower",
+    "category": "Cannabis",
+    "classification": "",
+    "reason": "Labelling and packaging",
+    "recall_date": "2026-10-21",
+    "url": "https://recalls-rappels.canada.ca/en/alert-recall/galaxie-brands-corporation-recalls-overtime-punch-out-due-labelling-issue",
+    "extras": {
+      "Organization": "Controlled substances and cannabis",
+      "What you should do": "Check to see if your products are affected.Contact the store where you bought the products if you wish to return them.Report any health or safety complaints you have about these or other cannabis products by filling out the Cannabis Reporting Form online.",
+      "Archived": "0"
+    }
+  },
+  {
+    "schema_version": 1,
     "id": "82808",
     "regulator": "Health Canada",
     "country": "CA",
