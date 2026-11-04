@@ -734,6 +734,24 @@
   },
   {
     "schema_version": 1,
+    "id": "82896",
+    "regulator": "Health Canada",
+    "country": "CA",
+    "title": "Cyclophosphamide for Injection USP: Presence of particulate matter",
+    "product": "Cyclophosphamide for Injection USP",
+    "category": "Drugs",
+    "classification": "Type I",
+    "reason": "Product quality",
+    "recall_date": "2026-10-30",
+    "url": "https://recalls-rappels.canada.ca/en/alert-recall/cyclophosphamide-injection-usp-presence-particulate-matter",
+    "extras": {
+      "Organization": "Drugs and health products",
+      "What you should do": "Consult your healthcare provider for any health concerns.Contact the recalling firm if you have any questions about the recall.Report any health product&nbsp;related&nbsp;side effects&nbsp;to Health Canada.Report any other health product safety&nbsp;complaints&nbsp;to&nbsp;Health Canada.",
+      "Archived": "0"
+    }
+  },
+  {
+    "schema_version": 1,
     "id": "82891",
     "regulator": "Health Canada",
     "country": "CA",
