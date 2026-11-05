@@ -734,6 +734,42 @@
   },
   {
     "schema_version": 1,
+    "id": "82895",
+    "regulator": "Health Canada",
+    "country": "CA",
+    "title": "Uniprim Oral Powder: Packaging defect in affected lots",
+    "product": "Neogen Vet Uniprim Oral Powder (Apple Flavored)",
+    "category": "Veterinary drugs",
+    "classification": "Type III",
+    "reason": "Packaging",
+    "recall_date": "2026-11-04",
+    "url": "https://recalls-rappels.canada.ca/en/alert-recall/uniprim-oral-powder-packaging-defect-affected-lots",
+    "extras": {
+      "Organization": "Drugs and health products",
+      "What you should do": "Verify if your product is affected.Consult your healthcare provider prior to discontinuing use of the affected product, or for any health concerns.Contact the recalling firm if you have any questions about the recall.Report any health product&nbsp;related&nbsp;side effects&nbsp;to Health Canada.Report any other health product safety&nbsp;complaints&nbsp;to&nbsp;Health Canada.",
+      "Archived": "0"
+    }
+  },
+  {
+    "schema_version": 1,
+    "id": "82902",
+    "regulator": "Health Canada",
+    "country": "CA",
+    "title": "ANTICOAGULANT SODIUM CITRATE SOLUTION, USP 4g/100mL and Potential Bag Leaks",
+    "product": "ANTICOAGULANT SODIUM CITRATE SOLUTION, USP",
+    "category": "Drugs",
+    "classification": "",
+    "reason": "Product quality - Packaging",
+    "recall_date": "2026-11-03",
+    "url": "https://recalls-rappels.canada.ca/en/alert-recall/anticoagulant-sodium-citrate-solution-usp-4g100ml-and-potential-bag-leaks",
+    "extras": {
+      "Organization": "Marketed health products",
+      "What you should do": "",
+      "Archived": "0"
+    }
+  },
+  {
+    "schema_version": 1,
     "id": "82896",
     "regulator": "Health Canada",
     "country": "CA",
