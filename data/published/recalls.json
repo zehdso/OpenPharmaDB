@@ -734,6 +734,42 @@
   },
   {
     "schema_version": 1,
+    "id": "82939",
+    "regulator": "Health Canada",
+    "country": "CA",
+    "title": "SECARIS NASAL GEL: Affected lot may contain foreign matter",
+    "product": "SECARIS NASAL GEL",
+    "category": "Drugs",
+    "classification": "Type II",
+    "reason": "Contamination",
+    "recall_date": "2026-11-13",
+    "url": "https://recalls-rappels.canada.ca/en/alert-recall/secaris-nasal-gel-affected-lot-may-contain-foreign-matter",
+    "extras": {
+      "Organization": "Drugs and health products",
+      "What you should do": "Verify if your product is affected.Consult your healthcare provider prior to discontinuing use of the affected product, or for any health concerns.Contact the recalling firm if you have any questions about the recall.Report any health product&nbsp;related&nbsp;side effects&nbsp;to Health Canada.Report any other health product safety&nbsp;complaints&nbsp;to&nbsp;Health Canada.",
+      "Archived": "0"
+    }
+  },
+  {
+    "schema_version": 1,
+    "id": "82944",
+    "regulator": "Health Canada",
+    "country": "CA",
+    "title": "Health Canada warns about unauthorized peptides, including contaminated injectable peptides sold by Sage & Summit Wellness Co. in Ottawa, ON",
+    "product": "Unauthorized peptides (injectable and capsule format)",
+    "category": "Drugs",
+    "classification": "",
+    "reason": "Unauthorized product - Contamination",
+    "recall_date": "2026-11-12",
+    "url": "https://recalls-rappels.canada.ca/en/alert-recall/health-canada-warns-about-unauthorized-peptides-including-contaminated-injectable",
+    "extras": {
+      "Organization": "Controlled substances and cannabis",
+      "What you should do": "If you have used an unauthorized peptide product and experience adverse effects or feel unwell, seek medical attention. If you have injected it and you develop redness, swelling, pain at the injection site, fever, or chills, seek immediate medical attention, as these may be signs of a serious infection.Do not buy or use unauthorized health products. Authorized health products have an eight-digit Drug Identification Number (DIN) or Natural Product Number (NPN) on the label. You can also check whether a drug has been authorized for sale by searching Health Canada's&nbsp;Drug Product Database or Licensed Natural Health Products Database.Do not use drugs that are labelled with any variation of “For Research Use Only”. These are intended for lab use, not human consumption, and can be dangerous to your health.Use prescription drugs under the care of a healthcare professional and only buy prescription drugs from licensed pharmacies. Be aware of the risks of buying health products online.Dispose of unauthorized peptide products by following municipal or regional guidance for chemicals and other hazardous waste or take the product to your local pharmacy for proper disposal.Report any health product-related&nbsp;side effects&nbsp;or&nbsp;complaints&nbsp;to Health Canada. Your reports help identify potentially dangerous products and protect others from harm.Visit Health Canada’s webpage on Peptides to learn more about peptides, their health risks, and steps you can take to protect yourself.Related links:Health Canada peptide safety advisoriesHealth Canada information on peptides",
+      "Archived": "0"
+    }
+  },
+  {
+    "schema_version": 1,
     "id": "82928",
     "regulator": "Health Canada",
     "country": "CA",
