@@ -7523,7 +7523,7 @@
     "recall_date": "20240720",
     "url": null,
     "extras": {
-      "status": "Completed",
+      "status": "Terminated",
       "city": "Louisville",
       "state": "CO",
       "country": "United States",
@@ -7539,6 +7539,7 @@
       "recall_number": "F-1643-2024",
       "product_quantity": "450 cases",
       "center_classification_date": "20240805",
+      "termination_date": "20261112",
       "report_date": "20240814",
       "code_info": "Lot numbers are 24183C and 24183A   UPC: 65708202951 3"
     }
@@ -37826,7 +37827,7 @@
     "recall_date": "20170505",
     "url": null,
     "extras": {
-      "status": "Completed",
+      "status": "Terminated",
       "city": "Parsippany",
       "state": "NJ",
       "country": "United States",
@@ -37842,6 +37843,7 @@
       "recall_number": "F-2305-2017",
       "product_quantity": "153513 units",
       "center_classification_date": "20170605",
+      "termination_date": "20261112",
       "report_date": "20170614",
       "code_info": "ALL"
     }
