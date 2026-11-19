@@ -734,6 +734,42 @@
   },
   {
     "schema_version": 1,
+    "id": "82964",
+    "regulator": "Health Canada",
+    "country": "CA",
+    "title": "PegLyte Powder: Affected lots may contain foreign matter",
+    "product": "PegLyte Powder",
+    "category": "Drugs",
+    "classification": "Type III",
+    "reason": "Contamination",
+    "recall_date": "2026-11-17",
+    "url": "https://recalls-rappels.canada.ca/en/alert-recall/peglyte-powder-affected-lots-may-contain-foreign-matter",
+    "extras": {
+      "Organization": "Drugs and health products",
+      "What you should do": "Verify if your product is affected.Consult your healthcare provider prior to discontinuing use of the affected product, or for any health concerns.Contact the recalling firm if you have any questions about the recall.Report any health product&nbsp;related&nbsp;side effects&nbsp;to Health Canada.Report any other health product safety&nbsp;complaints&nbsp;to&nbsp;Health Canada.",
+      "Archived": "0"
+    }
+  },
+  {
+    "schema_version": 1,
+    "id": "82965",
+    "regulator": "Health Canada",
+    "country": "CA",
+    "title": "TARO-CANDESARTAN: affected lots may contain Esomeprazole 20mg capsules",
+    "product": "Taro-Candesartan tablets",
+    "category": "Drugs",
+    "classification": "Type II",
+    "reason": "Product quality",
+    "recall_date": "2026-11-16",
+    "url": "https://recalls-rappels.canada.ca/en/alert-recall/taro-candesartan-affected-lots-may-contain-esomeprazole-20mg-capsules",
+    "extras": {
+      "Organization": "Drugs and health products",
+      "What you should do": "Verify if your product is affected.Consult your healthcare provider for any health concerns.Contact the recalling firm if you have any questions about the recall.Report any health product&nbsp;related&nbsp;side effects&nbsp;to Health Canada.Report any other health product safety&nbsp;complaints&nbsp;to&nbsp;Health Canada.",
+      "Archived": "0"
+    }
+  },
+  {
+    "schema_version": 1,
     "id": "82939",
     "regulator": "Health Canada",
     "country": "CA",
@@ -19971,7 +20007,7 @@
     "extras": {
       "Organization": "Drugs and health products",
       "What you should do": "Verify if your product is affected.Consult your healthcare provider prior to discontinuing use of the affected product(s), or for any health concerns.Contact the recalling firm if you have any questions about the recall.Report any health product&nbsp;related&nbsp;side effects&nbsp;to Health Canada.Report any other health product safety&nbsp;complaints&nbsp;to&nbsp;Health Canada.",
-      "Archived": "0"
+      "Archived": "1"
     }
   },
   {
