@@ -771,6 +771,24 @@
   },
   {
     "schema_version": 1,
+    "id": "82995",
+    "regulator": "Health Canada",
+    "country": "CA",
+    "title": "TAVNEOS (avacopan) - Canadian Patient Transition and Market Withdrawal Plan",
+    "product": "TAVNEOS (avacopan) capsules, 10 mg",
+    "category": "Drugs",
+    "classification": "",
+    "reason": "New safety information - Product withdrawal",
+    "recall_date": "2026-11-24",
+    "url": "https://recalls-rappels.canada.ca/en/alert-recall/tavneos-avacopan-canadian-patient-transition-and-market-withdrawal-plan",
+    "extras": {
+      "Organization": "Marketed health products",
+      "What you should do": "",
+      "Archived": "0"
+    }
+  },
+  {
+    "schema_version": 1,
     "id": "82986",
     "regulator": "Health Canada",
     "country": "CA",
