@@ -771,6 +771,60 @@
   },
   {
     "schema_version": 1,
+    "id": "82998",
+    "regulator": "Health Canada",
+    "country": "CA",
+    "title": "Origami Extraction Inc. recalls Smoke Ops Shatter 1.0 g due to labelling issue",
+    "product": "Smoke Ops Shatter 1.0 g cannabis extract",
+    "category": "Cannabis",
+    "classification": "",
+    "reason": "Labelling and packaging",
+    "recall_date": "2026-11-26",
+    "url": "https://recalls-rappels.canada.ca/en/alert-recall/origami-extraction-inc-recalls-smoke-ops-shatter-10-g-due-labelling-issue",
+    "extras": {
+      "Organization": "Controlled substances and cannabis",
+      "What you should do": "Check to see if your products are affected.Contact the licence holder from whom you bought the products if you wish to return them.Report any health or safety complaints you have about these or other cannabis products by filling out the Cannabis Reporting Form online.",
+      "Archived": "0"
+    }
+  },
+  {
+    "schema_version": 1,
+    "id": "83010",
+    "regulator": "Health Canada",
+    "country": "CA",
+    "title": "Health Canada warns of very rare but serious risk of vision loss with semaglutide drugs",
+    "product": "Prescription semaglutide drugs",
+    "category": "Drugs",
+    "classification": "",
+    "reason": "New safety information",
+    "recall_date": "2026-11-25",
+    "url": "https://recalls-rappels.canada.ca/en/alert-recall/health-canada-warns-very-rare-serious-risk-vision-loss-semaglutide-drugs",
+    "extras": {
+      "Organization": "Controlled substances and cannabis",
+      "What you should do": "Discuss the potential risks of using any health product with your healthcare provider before you start taking a product.If you experience sudden vision loss or rapidly worsening eyesight while taking semaglutide (e.g., blurring or cloudiness of vision), seek urgent medical attention. Your doctor may refer you to an eye specialist (ophthalmologist) for an examination. If NAION is confirmed, you may need to stop taking the medication.If you have questions or concerns about any health product you are taking, speak with a health care professional such as your doctor or pharmacist.You can report any health product-related side effects or complaints (e.g. quality concerns) to Health Canada.Information for healthcare professionals:There is no identified time interval for when NAION may develop after starting treatment.Patients reporting a sudden vision loss, including partial vision loss, should be urgently referred for ophthalmological examination.Treatment with semaglutide should be discontinued if NAION is confirmed.Related links:Summary Safety Review - Semaglutide - Assessing the Potential Risk of Non-arteritic Anterior Ischemic Optic Neuropathy (2026-11-25)",
+      "Archived": "0"
+    }
+  },
+  {
+    "schema_version": 1,
+    "id": "82996",
+    "regulator": "Health Canada",
+    "country": "CA",
+    "title": "Various Clef des Champs Inc. natural health products: Out-of-specification (microbial contamination)",
+    "product": "Various natural health products (see Affected products section)",
+    "category": "Natural health products",
+    "classification": "Type II",
+    "reason": "Contamination",
+    "recall_date": "2026-11-25",
+    "url": "https://recalls-rappels.canada.ca/en/alert-recall/various-clef-champs-inc-natural-health-products-out-specification-microbial",
+    "extras": {
+      "Organization": "Drugs and health products",
+      "What you should do": "Verify if your product is affected.Consult your healthcare provider for any health concerns.Contact the recalling firm if you have any questions about the recall.Report any health product&nbsp;related&nbsp;side effects&nbsp;to Health Canada.Report any other health product safety&nbsp;complaints&nbsp;to&nbsp;Health Canada.",
+      "Archived": "0"
+    }
+  },
+  {
+    "schema_version": 1,
     "id": "82995",
     "regulator": "Health Canada",
     "country": "CA",
